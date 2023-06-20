@@ -1,7 +1,10 @@
 package com.carfinder.carfinder.infrastructure.repositories;
 
 import co.elastic.clients.elasticsearch.ElasticsearchClient;
+import co.elastic.clients.elasticsearch._types.query_dsl.QueryBuilders;
 import co.elastic.clients.elasticsearch.core.GetResponse;
+import co.elastic.clients.elasticsearch.core.SearchResponse;
+import co.elastic.clients.elasticsearch.core.search.Hit;
 import com.carfinder.carfinder.domain.Question;
 import com.carfinder.carfinder.domain.QuestionAdapter;
 import com.carfinder.carfinder.domain.exceptions.RepositoryException;
@@ -9,6 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class QuestionRepository implements QuestionAdapter {
@@ -21,7 +25,15 @@ public class QuestionRepository implements QuestionAdapter {
 
     @Override
     public List<Question> getQuestions() {
-        return null;
+        try{
+            return  elasticsearchClient.search( s -> s
+                    .index("questions")
+                    .query(QueryBuilders.matchAll(q -> q))
+                    .size(1000), Question.class)
+                    .hits().hits().stream().map(Hit::source).toList();
+        }catch (IOException e){
+            throw new RepositoryException("Error getting all questions:", e);
+        }
     }
 
     @Override

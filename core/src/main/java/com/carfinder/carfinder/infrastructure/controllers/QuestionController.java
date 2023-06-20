@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("questions")
 public class QuestionController {
@@ -14,6 +16,11 @@ public class QuestionController {
 
     public QuestionController(QuestionService questionService) {
         this.questionService = questionService;
+    }
+
+    @GetMapping
+    public List<Question> getQuestions() {
+        return questionService.getQuestions();
     }
 
     @GetMapping("/{id}")
