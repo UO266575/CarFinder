@@ -5,7 +5,7 @@ import java.util.List;
 public interface QuestionAdapter {
     List<Question> getQuestions();
 
-    Question getQuestionById(Long id);
+    Question getQuestionById(String id);
 
     void addQuestion(Question question);
     void updateQuestion(Long id, Question question);
