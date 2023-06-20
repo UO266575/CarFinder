@@ -7,6 +7,6 @@ enum Tipo {
   SEARCHER
 };
 
-public record User(String name, String lastName, String dni, String userName, String password, LocalDate d, Tipo t){
+public record User(long id, String name, String lastName, String dni, String userName, String password, LocalDate d, Tipo t){
     
 }
