@@ -66,7 +66,7 @@ public class QuestionRepository implements QuestionAdapter {
                     .id(id)
                     .document(question));
         } catch (IOException e) {
-            throw new RepositoryException("Error adding question:", e);
+            throw new RepositoryException("Error updating question:", e);
         }
     }
 
@@ -77,7 +77,7 @@ public class QuestionRepository implements QuestionAdapter {
                     .index("questions")
                     .id(id));
         } catch (IOException e) {
-            throw new RepositoryException("Error adding question:", e);
+            throw new RepositoryException("Error deleting question:", e);
         }
     }
 }

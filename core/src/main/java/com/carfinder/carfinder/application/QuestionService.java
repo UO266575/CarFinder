@@ -12,8 +12,11 @@ public class QuestionService {
 
     private final QuestionAdapter questionAdapter;
 
-    public QuestionService(QuestionAdapter questionAdapter) {
+    private final AnswerService answerService;
+
+    public QuestionService(QuestionAdapter questionAdapter, AnswerService answerService) {
         this.questionAdapter = questionAdapter;
+        this.answerService = answerService;
     }
 
     public List<Question> getQuestions() {
@@ -39,6 +42,7 @@ public class QuestionService {
     public boolean addQuestion(Question question) {
         try {
             questionAdapter.addQuestion(question);
+            answerService.addAnswers(question.answers());
         } catch (RepositoryException re) {
             return false;
         }
