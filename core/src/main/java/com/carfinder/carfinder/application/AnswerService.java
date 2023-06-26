@@ -16,9 +16,14 @@ public class AnswerService {
         this.answerAdapter = answerAdapter;
     }
 
-
-    public void addAnswers(List<Answer> answers) {
-        answerAdapter.addAnswers(answers);
+    public List<Answer> getAnswers() {
+        List<Answer> answers;
+        try {
+            answers = answerAdapter.getAnswers();
+        } catch (RepositoryException re) {
+            return null;
+        }
+        return answers;
     }
 
     public Answer getAnswerById(String id) {
@@ -29,5 +34,47 @@ public class AnswerService {
             return null;
         }
         return answer;
+    }
+
+    public boolean addAnswer(Answer answer) {
+        try {
+            answerAdapter.addAnswer(answer);
+        } catch (RepositoryException re) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean addAnswers(List<Answer> answers) {
+        try {
+            answerAdapter.addAnswers(answers);
+        } catch (RepositoryException re) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean updateAnswer(String id, Answer question) {
+        if (getAnswerById(id) == null) {
+            return false;
+        }
+        try {
+            answerAdapter.updateAnswer(id, question);
+        } catch (RepositoryException re) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean deleteAnswer(String id) {
+        if (getAnswerById(id) == null) {
+            return false;
+        }
+        try {
+            answerAdapter.deleteAnswer(id);
+        } catch (RepositoryException re) {
+            return false;
+        }
+        return true;
     }
 }
