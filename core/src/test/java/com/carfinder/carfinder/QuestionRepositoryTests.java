@@ -81,10 +81,17 @@ public class QuestionRepositoryTests {
 
         Mockito.when(service.getQuestionById("4")).thenThrow(new RepositoryException("Error getting question by id: " + 4, new IOException()));
 
-        
+        service.updateQuestion(q);
     }
 
     @Test
     @DisplayName("Test deleteQuestion")
-    
+    public void deleteQuestionTest()
+    {
+        Mockito.when(service.deleteQuestion(1L).then(false));
+
+        boolean res = service.deleteQuestion(1L);
+
+        assertEquals(false,res);
+    }
 }
