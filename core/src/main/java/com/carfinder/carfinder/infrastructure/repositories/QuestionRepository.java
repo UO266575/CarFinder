@@ -3,7 +3,6 @@ package com.carfinder.carfinder.infrastructure.repositories;
 import co.elastic.clients.elasticsearch.ElasticsearchClient;
 import co.elastic.clients.elasticsearch._types.query_dsl.QueryBuilders;
 import co.elastic.clients.elasticsearch.core.GetResponse;
-import co.elastic.clients.elasticsearch.core.SearchResponse;
 import co.elastic.clients.elasticsearch.core.search.Hit;
 import com.carfinder.carfinder.domain.Question;
 import com.carfinder.carfinder.domain.QuestionAdapter;
@@ -25,13 +24,13 @@ public class QuestionRepository implements QuestionAdapter {
 
     @Override
     public List<Question> getQuestions() {
-        try{
-            return  elasticsearchClient.search( s -> s
-                    .index("questions")
-                    .query(QueryBuilders.matchAll(q -> q))
-                    .size(1000), Question.class)
+        try {
+            return elasticsearchClient.search(s -> s
+                            .index("questions")
+                            .query(QueryBuilders.matchAll( q -> q))
+                            .size(1000), Question.class)
                     .hits().hits().stream().map(Hit::source).toList();
-        }catch (IOException e){
+        } catch (IOException e) {
             throw new RepositoryException("Error getting all questions:", e);
         }
     }
@@ -61,12 +60,25 @@ public class QuestionRepository implements QuestionAdapter {
     }
 
     @Override
-    public void updateQuestion(Long id, Question question) {
-
+    public void updateQuestion(String id, Question question) {
+        try {
+            elasticsearchClient.index( i -> i
+                    .index("questions")
+                    .id(id)
+                    .document(question));
+        } catch (IOException e) {
+            throw new RepositoryException("Error updating question:", e);
+        }
     }
 
     @Override
-    public void deleteQuestion(Long id) {
-
+    public void deleteQuestion(String id) {
+        try {
+            elasticsearchClient.delete( d -> d
+                    .index("questions")
+                    .id(id));
+        } catch (IOException e) {
+            throw new RepositoryException("Error deleting question:", e);
+        }
     }
 }

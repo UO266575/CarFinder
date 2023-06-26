@@ -8,7 +8,8 @@ public interface QuestionAdapter {
     Question getQuestionById(String id);
 
     void addQuestion(Question question);
-    void updateQuestion(Long id, Question question);
 
-    void deleteQuestion(Long id);
+    void updateQuestion(String id, Question question);
+
+    void deleteQuestion(String id);
 }
