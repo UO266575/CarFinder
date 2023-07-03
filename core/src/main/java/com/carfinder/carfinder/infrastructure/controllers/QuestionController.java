@@ -49,4 +49,17 @@ public class QuestionController {
         return questionService.deleteQuestion(id) ? ResponseEntity.ok("Question deleted successfully") :
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to delete question");
     }
+
+    @DeleteMapping("/bulk")
+    public ResponseEntity<String> deleteAllQuestions() {
+        return questionService.deleteAllQuestions() ? ResponseEntity.ok("Questions deleted successfully") :
+                ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to delete questions");
+    }
+
+    @GetMapping("/bulkDefault")
+    public ResponseEntity<String> addDefaultQuestions() {
+        return questionService.insertDefaultQuestions() ?
+                ResponseEntity.ok("Question added successfully") :
+                ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to add the question");
+    }
 }

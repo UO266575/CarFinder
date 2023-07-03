@@ -81,4 +81,15 @@ public class QuestionRepository implements QuestionAdapter {
             throw new RepositoryException("Error deleting question:", e);
         }
     }
+
+    @Override
+    public void deleteAllQuestions() {
+        try {
+            elasticsearchClient.deleteByQuery(d -> d
+                    .index("questions")
+                    .query(QueryBuilders.matchAll(q -> q)));
+        } catch (IOException e) {
+            throw new RepositoryException("Error deleting all questions:", e);
+        }
+    }
 }

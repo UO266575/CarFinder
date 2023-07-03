@@ -77,4 +77,16 @@ public class AnswerService {
         }
         return true;
     }
+
+    public boolean deleteAllAnswers() {
+        if (getAnswers().size() == 0) {
+            return false;
+        }
+        try {
+            answerAdapter.deleteAllAnswers();
+        } catch (RepositoryException re) {
+            return false;
+        }
+        return true;
+    }
 }

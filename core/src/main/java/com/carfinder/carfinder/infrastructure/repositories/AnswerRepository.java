@@ -94,4 +94,15 @@ public class AnswerRepository implements AnswerAdapter {
             throw new RepositoryException("Error deleting answer:", e);
         }
     }
+
+    @Override
+    public void deleteAllAnswers() {
+        try {
+            elasticsearchClient.deleteByQuery(d -> d
+                    .index("answers")
+                    .query(QueryBuilders.matchAll(q -> q)));
+        } catch (IOException e) {
+            throw new RepositoryException("Error deleting all answers:", e);
+        }
+    }
 }

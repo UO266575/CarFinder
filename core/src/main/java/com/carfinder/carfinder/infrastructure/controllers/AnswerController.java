@@ -56,4 +56,10 @@ public class AnswerController {
         return answerService.deleteAnswer(id) ? ResponseEntity.ok("Answer deleted successfully") :
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to delete answer");
     }
+
+    @DeleteMapping("/bulk")
+    public ResponseEntity<String> deleteAllAnswers() {
+        return answerService.deleteAllAnswers() ? ResponseEntity.ok("Answers deleted successfully") :
+                ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to delete answers");
+    }
 }

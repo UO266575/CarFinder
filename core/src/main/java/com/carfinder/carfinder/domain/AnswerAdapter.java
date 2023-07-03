@@ -15,4 +15,6 @@ public interface AnswerAdapter {
     void updateAnswer(String id, Answer answer);
 
     void deleteAnswer(String id);
+
+    void deleteAllAnswers();
 }
