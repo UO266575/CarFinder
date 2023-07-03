@@ -41,8 +41,8 @@ public class QuestionService {
 
     public boolean addQuestion(Question question) {
         try {
-            questionAdapter.addQuestion(question);
             answerService.addAnswers(question.answers());
+            questionAdapter.addQuestion(question);
         } catch (RepositoryException re) {
             return false;
         }
@@ -71,5 +71,9 @@ public class QuestionService {
             return false;
         }
         return true;
+    }
+
+    public void insertDefaultQuestions(){
+
     }
 }

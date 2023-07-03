@@ -37,7 +37,7 @@ public class AnswerController {
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to add the answer");
     }
 
-    @PostMapping
+    @PostMapping("/bulk")
     public ResponseEntity<String> addAnswers(@RequestBody List<Answer> answers) {
         return answerService.addAnswers(answers) ?
                 ResponseEntity.ok("Answers added successfully") :
