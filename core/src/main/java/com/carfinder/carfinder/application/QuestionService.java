@@ -73,7 +73,21 @@ public class QuestionService {
         return true;
     }
 
-    public void insertDefaultQuestions(){
+    public boolean deleteAllQuestions() {
+        if (getQuestions().size() == 0) {
+            return false;
+        }
+        try {
+            questionAdapter.deleteAllQuestions();
+        } catch (RepositoryException re) {
+            return false;
+        }
+        return true;
+    }
 
+    public boolean insertDefaultQuestions(){
+        InsertDefaultQuestionsData insert = new InsertDefaultQuestionsData(this);
+        insert.createAndInsertQuestions();
+        return true;
     }
 }

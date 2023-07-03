@@ -12,4 +12,6 @@ public interface QuestionAdapter {
     void updateQuestion(String id, Question question);
 
     void deleteQuestion(String id);
+
+    void deleteAllQuestions();
 }
