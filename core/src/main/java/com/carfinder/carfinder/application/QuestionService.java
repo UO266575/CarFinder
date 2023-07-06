@@ -101,14 +101,14 @@ public class QuestionService {
         if(questionsShown == null){
             questionsShown = new HashSet<String>();
         }
-        for(int i = 0; i < 5; i++){
-            Random random = new Random();
+        Random random = new Random();
+        int questionsShownSize = questionsShown.size();
+        while(questionsShown.size() - questionsShownSize < 5){
             String id = String.valueOf(random.nextInt(17) + 5);
-            while(questionsShown.contains(id)){
-                id = String.valueOf(random.nextInt(17) + 5);
+            if(!questionsShown.contains(id)){
+                questions.add(getQuestionById(id));
+                questionsShown.add(id);
             }
-            questions.add(getQuestionById(id));
-            questionsShown.add(id);
         }
         httpSession.setAttribute("questionsShown", questionsShown);
         return questions;
