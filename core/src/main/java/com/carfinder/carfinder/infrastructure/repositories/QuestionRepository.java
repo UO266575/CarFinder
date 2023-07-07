@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class QuestionRepository implements QuestionAdapter {
@@ -26,7 +27,7 @@ public class QuestionRepository implements QuestionAdapter {
         try {
             return elasticsearchClient.search(s -> s
                             .index("questions")
-                            .query(QueryBuilders.matchAll(q -> q))
+                            .query(QueryBuilders.matchAll( q -> q))
                             .size(1000), Question.class)
                     .hits().hits().stream().map(Hit::source).toList();
         } catch (IOException e) {
@@ -37,7 +38,7 @@ public class QuestionRepository implements QuestionAdapter {
     @Override
     public Question getQuestionById(String id) {
         try {
-            GetResponse<Question> response = elasticsearchClient.get(g -> g
+            GetResponse<Question> response = elasticsearchClient.get( g -> g
                     .index("questions")
                     .id(id), Question.class);
             return response.source();
@@ -49,7 +50,7 @@ public class QuestionRepository implements QuestionAdapter {
     @Override
     public void addQuestion(Question question) {
         try {
-            elasticsearchClient.index(i -> i
+            elasticsearchClient.index( i -> i
                     .index("questions")
                     .id(question.id())
                     .document(question));
@@ -61,7 +62,7 @@ public class QuestionRepository implements QuestionAdapter {
     @Override
     public void updateQuestion(String id, Question question) {
         try {
-            elasticsearchClient.index(i -> i
+            elasticsearchClient.index( i -> i
                     .index("questions")
                     .id(id)
                     .document(question));
@@ -73,7 +74,7 @@ public class QuestionRepository implements QuestionAdapter {
     @Override
     public void deleteQuestion(String id) {
         try {
-            elasticsearchClient.delete(d -> d
+            elasticsearchClient.delete( d -> d
                     .index("questions")
                     .id(id));
         } catch (IOException e) {
