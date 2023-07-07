@@ -56,10 +56,16 @@ public class QuestionController {
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to delete questions");
     }
 
-    @GetMapping("/bulkDefault")
+    @PostMapping("/bulkDefault")
     public ResponseEntity<String> addDefaultQuestions() {
         return questionService.insertDefaultQuestions() ?
                 ResponseEntity.ok("Question added successfully") :
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to add the question");
+    }
+
+    @GetMapping("/round")
+    public ResponseEntity<List<Question>> getQuizQuestions() {
+        List<Question> questions = questionService.retrieveFiveQuestions();
+        return questions != null ? ResponseEntity.ok(questions) : ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 }
