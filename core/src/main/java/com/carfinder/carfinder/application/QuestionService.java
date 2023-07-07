@@ -89,26 +89,26 @@ public class QuestionService {
         return true;
     }
 
-    public boolean insertDefaultQuestions(){
+    public boolean insertDefaultQuestions() {
         InsertDefaultQuestionsData insert = new InsertDefaultQuestionsData(this);
         insert.createAndInsertQuestions();
         return true;
     }
 
-    public List<Question> retrieveFiveQuestions(){
+    public List<Question> retrieveFiveQuestions() {
         List<Question> questions = new ArrayList<Question>();
         Set<String> questionsShown = (Set<String>) httpSession.getAttribute("questionsShown");
-        if(questionsShown == null){
+        if (questionsShown == null) {
             questionsShown = new HashSet<String>();
         }
         Random random = new Random();
         int questionsShownSize = questionsShown.size();
-        while(questionsShown.size() - questionsShownSize < 5){
-            if(getQuestions().size() - questionsShownSize < 5){
+        while (questionsShown.size() - questionsShownSize < 5) {
+            if (getQuestions().size() - questionsShownSize < 5) {
                 return retrieveRemainQuestions(questionsShown);
             }
             String id = String.valueOf(random.nextInt(17) + 5);
-            if(!questionsShown.contains(id)){
+            if (!questionsShown.contains(id)) {
                 questions.add(getQuestionById(id));
                 questionsShown.add(id);
             }

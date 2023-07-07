@@ -62,10 +62,4 @@ public class QuestionController {
                 ResponseEntity.ok("Question added successfully") :
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to add the question");
     }
-
-    @GetMapping("/round")
-    public ResponseEntity<List<Question>> getQuizQuestions() {
-        List<Question> questions = questionService.retrieveFiveQuestions();
-        return questions != null ? ResponseEntity.ok(questions) : ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-    }
 }
