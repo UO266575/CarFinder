@@ -2,10 +2,12 @@ package com.carfinder.carfinder.infrastructure.controllers;
 
 import com.carfinder.carfinder.application.AnswerService;
 import com.carfinder.carfinder.application.QuizService;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.carfinder.carfinder.domain.Question;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("quiz")
@@ -22,5 +24,11 @@ public class QuizController {
     @PostMapping("/answer/{answerId}")
     public void userAnswerSelection(@PathVariable String answerId){
         quizService.processAnswerSelection(answerService.getAnswerById(answerId));
+    }
+
+    @GetMapping("/round")
+    public ResponseEntity<List<Question>> getQuizQuestions() {
+        List<Question> questions = quizService.retrieveFiveQuestions();
+        return questions != null ? ResponseEntity.ok(questions) : ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 }
