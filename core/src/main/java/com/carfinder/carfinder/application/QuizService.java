@@ -14,14 +14,23 @@ public class QuizService {
 
     private final QuestionService questionService;
 
-    public QuizService(QuestionService questionService) {
+    private final AnswerService answerService;
+
+    public QuizService(QuestionService questionService, AnswerService answerService) {
         this.questionService = questionService;
+        this.answerService = answerService;
         this.filter = new Filter();
     }
 
 
     public void processAnswerSelection(Answer answer) {
         answer.score().forEach(filter::calculateFilter);
+    }
+
+    public void processAnswerSelection(List<String> answers) {
+        answers.stream()
+                .map(answerId -> answerService.getAnswerById(answerId))
+                .forEach(this::processAnswerSelection);
     }
 
     public List<Question> retrieveFiveQuestions() {

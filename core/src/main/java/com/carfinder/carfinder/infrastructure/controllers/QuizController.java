@@ -2,6 +2,7 @@ package com.carfinder.carfinder.infrastructure.controllers;
 
 import com.carfinder.carfinder.application.AnswerService;
 import com.carfinder.carfinder.application.QuizService;
+import com.carfinder.carfinder.domain.Answer;
 import com.carfinder.carfinder.domain.Question;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +25,11 @@ public class QuizController {
     @PostMapping("/answer/{answerId}")
     public void userAnswerSelection(@PathVariable String answerId){
         quizService.processAnswerSelection(answerService.getAnswerById(answerId));
+    }
+
+    @PostMapping("/answer/bulk")
+    public void userAnswersSelection(@RequestBody List<String> answers) {
+        quizService.processAnswerSelection(answers);
     }
 
     @GetMapping("/round")
