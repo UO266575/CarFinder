@@ -104,6 +104,9 @@ public class QuestionService {
         Random random = new Random();
         int questionsShownSize = questionsShown.size();
         while(questionsShown.size() - questionsShownSize < 5){
+            if(getQuestions().size() - questionsShownSize < 5){
+                return retrieveRemainQuestions(questionsShown);
+            }
             String id = String.valueOf(random.nextInt(17) + 5);
             if(!questionsShown.contains(id)){
                 questions.add(getQuestionById(id));
@@ -112,5 +115,13 @@ public class QuestionService {
         }
         httpSession.setAttribute("questionsShown", questionsShown);
         return questions;
+    }
+
+    private List<Question> retrieveRemainQuestions(Set<String> questionsShown) {
+        List<Question> allQuestions = getQuestions();
+        return allQuestions
+                .stream()
+                .filter(question -> !questionsShown.contains(question.id()))
+                .toList();
     }
 }
