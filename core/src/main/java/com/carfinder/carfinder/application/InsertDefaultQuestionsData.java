@@ -18,50 +18,50 @@ public class InsertDefaultQuestionsData {
     public void createAndInsertQuestions() {
         //Question 5
         Answer q5_answer1 = new Answer("q5_answer1", "Activo y aventurero.", List.of(
-                    new Filter("bodyStyle4x4", 20, "icekarId", 0),
-                    new Filter("bodyStylePickUp", 20, "icekarId", 0),
+                    new Filter("bodyStyle4x4", 20, "vehicle_type_ids", 7),
+                    new Filter("bodyStylePickUp", 20, "vehicle_type_ids", 8),
 
-                    new Filter("bodyStyleVan", 10, "icekarId", 0),
+                    new Filter("bodyStyleVan", 10, "vehicle_type_ids", 6),
 
-                    new Filter("bodyStyleSedan", 5, "icekarId", 0),
+                    new Filter("bodyStyleSedan", 5, "vehicle_type_ids", 2),
 
-                    new Filter("bodyStyleConvertible", -10, "icekarId", 0),
-                    new Filter("bodyStyleTruck", -10, "icekarId", 0),
-                    new Filter("bodyStyleCoupe", -10, "icekarId", 0),
-                    new Filter("bodyStyleFamily", -10, "icekarId", 0),
-                    new Filter("bodyStyleMPV", -10, "icekarId", 0)
+                    new Filter("bodyStyleConvertible", -10, "vehicle_type_ids", 1),
+                    new Filter("bodyStyleTruck", -10, "vehicle_type_ids", 9),
+                    new Filter("bodyStyleCoupe", -10, "vehicle_type_ids", 4),
+                    new Filter("bodyStyleFamily", -10, "vehicle_type_ids", 3),
+                    new Filter("bodyStyleMPV", -10, "vehicle_type_ids", 5)
             )
         );
 
         Answer q5_answer2 = new Answer("q5_answer2", "Elegante y sofisticado.", List.of(
-                new Filter("bodyStyleConvertible", 20, "icekarId", 0),
-                new Filter("bodyStyleCoupe", 20, "icekarId", 0),
+                new Filter("bodyStyleConvertible", 20, "vehicle_type_ids", 1),
+                new Filter("bodyStyleCoupe", 20, "vehicle_type_ids", 4),
 
-                new Filter("bodyStyleFamily", -10, "icekarId", 0),
-                new Filter("bodyStyleMPV", -10, "icekarId", 0),
-                new Filter("bodyStyleVan", -10, "icekarId", 0),
-                new Filter("bodyStyleTruck", -10, "icekarId", 0)
+                new Filter("bodyStyleFamily", -10, "vehicle_type_ids", 3),
+                new Filter("bodyStyleMPV", -10, "vehicle_type_ids", 5),
+                new Filter("bodyStyleVan", -10, "vehicle_type_ids", 6),
+                new Filter("bodyStyleTruck", -10, "vehicle_type_ids", 9)
         ));
 
         Answer q5_answer3 = new Answer("q5_answer3", "Práctico y funcional.", List.of(
-                new Filter("bodyStyleSedan", 20, "icekarId", 0),
-                new Filter("bodyStyleFamily", 20, "icekarId", 0),
-                new Filter("bodyStyleMPV", 20, "icekarId", 0),
+                new Filter("bodyStyleSedan", 20, "vehicle_type_ids", 2),
+                new Filter("bodyStyleFamily", 20, "vehicle_type_ids", 3),
+                new Filter("bodyStyleMPV", 20, "vehicle_type_ids", 5),
 
-                new Filter("bodyStyleConvertible", -10, "icekarId", 0),
-                new Filter("bodyStyleTruck", -10, "icekarId", 0)
+                new Filter("bodyStyleConvertible", -10, "vehicle_type_ids", 1),
+                new Filter("bodyStyleTruck", -10, "vehicle_type_ids", 9)
         ));
 
         Answer q5_answer4 = new Answer("q5_answer4", "Deportivo y dinámico.", List.of(
-                new Filter("bodyStyleConvertible", 20, "icekarId", 0),
-                new Filter("bodyStyleCoupe", 20, "icekarId", 0),
+                new Filter("bodyStyleConvertible", 20, "vehicle_type_ids", 1),
+                new Filter("bodyStyleCoupe", 20, "vehicle_type_ids", 4),
 
-                new Filter("bodyStyleFamily", -10, "icekarId", 0),
-                new Filter("bodyStyleMPV", -10, "icekarId", 0),
-                new Filter("bodyStyleVan", -10, "icekarId", 0),
-                new Filter("bodyStyle4x4", -10, "icekarId", 0),
-                new Filter("bodyStylePickUp", -10, "icekarId", 0),
-                new Filter("bodyStyleTruck", -10, "icekarId", 0)
+                new Filter("bodyStyleFamily", -10, "vehicle_type_ids", 3),
+                new Filter("bodyStyleMPV", -10, "vehicle_type_ids", 5),
+                new Filter("bodyStyleVan", -10, "vehicle_type_ids", 6),
+                new Filter("bodyStyle4x4", -10, "vehicle_type_ids", 7),
+                new Filter("bodyStylePickUp", -10, "vehicle_type_ids", 8),
+                new Filter("bodyStyleTruck", -10, "vehicle_type_ids", 9)
         ));
 
         Question q5 = new Question("5", 2, "¿Qué adjetivo definiría mejor su estilo de vida?",
@@ -71,27 +71,27 @@ public class InsertDefaultQuestionsData {
         Answer q6_answer1 = new Answer("q6_answer1", "Confort y espacio", List.of(
                 new Filter("doors5", 20, "icekarId", 0),
                 new Filter("seats5", 20, "icekarId", 0),
-                new Filter("bodyStyleMPV", 20, "icekarId", 0),
-                new Filter("bodyStyleFamily", 20, "icekarId", 0),
-                new Filter("bodyStyleConvertible", -10, "icekarId", 0),
-                new Filter("bodyStyleCoupe", -10, "icekarId", 0)
+                new Filter("bodyStyleMPV", 20, "vehicle_type_ids", 5),
+                new Filter("bodyStyleFamily", 20, "vehicle_type_ids", 3),
+                new Filter("bodyStyleConvertible", -10, "vehicle_type_ids", 1),
+                new Filter("bodyStyleCoupe", -10, "vehicle_type_ids", 4)
         ));
 
         Answer q6_answer2 = new Answer("q6_answer2", "Velocidad y potencia", List.of(
-                new Filter("cv200", 20, "icekarId", 0)
+                new Filter("cv200", 20, "min_cv", 200)
         ));
 
         Answer q6_answer3 = new Answer("q6_answer3", "Sensación de libertad", List.of(
-                new Filter("bodyStyleConvertible", 20, "icekarId", 0),
-                new Filter("bodyStyleVan", 5, "icekarId", 0),
-                new Filter("bodyStyleTruck", -50, "icekarId", 0)
+                new Filter("bodyStyleConvertible", 20, "vehicle_type_ids", 1),
+                new Filter("bodyStyleVan", 5, "vehicle_type_ids", 6),
+                new Filter("bodyStyleTruck", -50, "vehicle_type_ids", 9)
         ));
 
         Answer q6_answer4 = new Answer("q6_answer4", "Eficiencia y ahorro", List.of(
-                new Filter("label0", 50, "icekarId", 0),
-                new Filter("labelEco", 50, "icekarId", 0),
-                new Filter("labelB", -10, "icekarId", 0),
-                new Filter("labelC", -50, "icekarId", 0)
+                new Filter("label0", 50, "emission_sticker_ids", 1),
+                new Filter("labelEco", 50, "emission_sticker_ids", 2),
+                new Filter("labelB", -10, "emission_sticker_ids", 4),
+                new Filter("labelC", -50, "emission_sticker_ids", 3)
         ));
 
         Question q6 = new Question("6", 2, "¿Cómo te gusta disfrutar del viaje?",
@@ -99,24 +99,24 @@ public class InsertDefaultQuestionsData {
 
         //Question 7
         Answer q7_answer1 = new Answer("q7_answer1", "Ciudad y tráfico urbano", List.of(
-                new Filter("transmissionAuto", 40, "icekarId", 0),
-                new Filter("bodyStyleSedan", 40, "icekarId", 0),
-                new Filter("bodyStyleVan", -40, "icekarId", 0),
-                new Filter("bodyStyleTruck", -90, "icekarId", 0)
+                new Filter("transmissionAuto", 40, "gearbox_ids", 3),
+                new Filter("bodyStyleSedan", 40, "vehicle_type_ids", 2),
+                new Filter("bodyStyleVan", -40, "vehicle_type_ids", 6),
+                new Filter("bodyStyleTruck", -90, "vehicle_type_ids", 9)
         ));
 
         Answer q7_answer2 = new Answer("q7_answer2", "Carreteras y largos trayectos", List.of(
-                new Filter("transmissionManual", 40, "icekarId", 0),
-                new Filter("transmissionSemi", 40, "icekarId", 0),
-                new Filter("bodyStyleTruck", -30, "icekarId", 0)
+                new Filter("transmissionManual", 40, "gearbox_ids", 1),
+                new Filter("transmissionSemi", 40, "gearbox_ids", 2),
+                new Filter("bodyStyleTruck", -30, "vehicle_type_ids", 9)
         ));
 
         Answer q7_answer3 = new Answer("q7_answer3", "Terrenos irregulares y todo terreno", List.of(
-                new Filter("bodyStyle4x4", 40, "icekarId", 0),
-                new Filter("bodyStylePickUp", 40, "icekarId", 0),
-                new Filter("bodyStyleConvertible", -40, "icekarId", 0),
-                new Filter("bodyStyleCoupe", -40, "icekarId", 0),
-                new Filter("bodyStyleTruck", -40, "icekarId", 0)
+                new Filter("bodyStyle4x4", 40, "vehicle_type_ids", 7),
+                new Filter("bodyStylePickUp", 40, "vehicle_type_ids", 8),
+                new Filter("bodyStyleConvertible", -40, "vehicle_type_ids", 1),
+                new Filter("bodyStyleCoupe", -40, "vehicle_type_ids", 4),
+                new Filter("bodyStyleTruck", -40, "vehicle_type_ids", 9)
         ));
 
         Question q7 = new Question("7", 3, "¿Cuál es tu entorno de conducción habitual?",
@@ -124,36 +124,36 @@ public class InsertDefaultQuestionsData {
 
         //Question 8
         Answer q8_answer1 = new Answer("q8_answer1", "Trabajo y desplazamientos diarios", List.of(
-                new Filter("bodyStyleSedan", 20, "icekarId", 0),
-                new Filter("bodyStyleMPV", 10, "icekarId", 0),
-                new Filter("bodyStyleFamily", 10, "icekarId", 0),
-                new Filter("bodyStyleVan", -20, "icekarId", 0),
-                new Filter("bodyStyleConvertible", -20, "icekarId", 0),
-                new Filter("bodyStyleTruck", -100, "icekarId", 0)
+                new Filter("bodyStyleSedan", 20, "vehicle_type_ids", 2),
+                new Filter("bodyStyleMPV", 10, "vehicle_type_ids", 5),
+                new Filter("bodyStyleFamily", 10, "vehicle_type_ids", 3),
+                new Filter("bodyStyleVan", -20, "vehicle_type_ids", 6),
+                new Filter("bodyStyleConvertible", -20, "vehicle_type_ids", 1),
+                new Filter("bodyStyleTruck", -100, "vehicle_type_ids", 9)
         ));
 
         Answer q8_answer2 = new Answer("q8_answer2", "Viajes en familia o con amigos", List.of(
                 new Filter("doors5", 20, "icekarId", 0),
                 new Filter("seats5", 20, "icekarId", 0),
-                new Filter("bodyStyleFamily", 20, "icekarId", 0),
-                new Filter("bodyStyleMPV", 20, "icekarId", 0),
-                new Filter("bodyStyleSedan", 10, "icekarId", 0),
-                new Filter("bodyStyleVan", 10, "icekarId", 0),
-                new Filter("bodyStyleCoupe", -10, "icekarId", 0),
-                new Filter("bodyStyleConvertible", -10, "icekarId", 0),
-                new Filter("bodyStyleTruck", -10, "icekarId", 0)
+                new Filter("bodyStyleFamily", 20, "vehicle_type_ids", 3),
+                new Filter("bodyStyleMPV", 20, "vehicle_type_ids", 5),
+                new Filter("bodyStyleSedan", 10, "vehicle_type_ids", 2),
+                new Filter("bodyStyleVan", 10, "vehicle_type_ids", 6),
+                new Filter("bodyStyleCoupe", -10, "vehicle_type_ids", 4),
+                new Filter("bodyStyleConvertible", -10, "vehicle_type_ids", 1),
+                new Filter("bodyStyleTruck", -10, "vehicle_type_ids", 9)
         ));
 
         Answer q8_answer3 = new Answer("q8_answer3", "Transporte de mercancías o carga", List.of(
-                new Filter("bodyStyleVan", 90, "icekarId", 0),
-                new Filter("bodyStylePickUp", 90, "icekarId", 0),
-                new Filter("bodyStyleTruck", 90, "icekarId", 0),
-                new Filter("bodyStyleFamily", 10, "icekarId", 0),
-                new Filter("bodyStyleMPV", 10, "icekarId", 0),
-                new Filter("bodyStyle4x4", 10, "icekarId", 0),
-                new Filter("bodyStyleConvertible", -90, "icekarId", 0),
-                new Filter("bodyStyleCoupe", -90, "icekarId", 0),
-                new Filter("bodyStyleSedan", -90, "icekarId", 0)
+                new Filter("bodyStyleVan", 90, "vehicle_type_ids", 6),
+                new Filter("bodyStylePickUp", 90, "vehicle_type_ids", 8),
+                new Filter("bodyStyleTruck", 90, "vehicle_type_ids", 9),
+                new Filter("bodyStyleFamily", 10, "vehicle_type_ids", 3),
+                new Filter("bodyStyleMPV", 10, "vehicle_type_ids", 5),
+                new Filter("bodyStyle4x4", 10, "vehicle_type_ids", 7),
+                new Filter("bodyStyleConvertible", -90, "vehicle_type_ids", 1),
+                new Filter("bodyStyleCoupe", -90, "vehicle_type_ids", 4),
+                new Filter("bodyStyleSedan", -90, "vehicle_type_ids", 2)
         ));
 
         Question q8 = new Question("8", 3, "¿Qué tipo de actividad sueles realizar con tu coche?",
@@ -164,18 +164,18 @@ public class InsertDefaultQuestionsData {
                 "vías para automóviles", List.of());
 
         Answer q9_answer2 = new Answer("q9_answer2", "Terrenos irregulares o todoterreno", List.of(
-                new Filter("bodyStyle4x4", 40, "icekarId", 0),
-                new Filter("bodyStylePickUp", 40, "icekarId", 0),
-                new Filter("bodyStyleConvertible", -40, "icekarId", 0),
-                new Filter("bodyStyleCoupe", -40, "icekarId", 0),
-                new Filter("bodyStyleTruck", -40, "icekarId", 0)
+                new Filter("bodyStyle4x4", 40, "vehicle_type_ids", 7),
+                new Filter("bodyStylePickUp", 40, "vehicle_type_ids", 8),
+                new Filter("bodyStyleConvertible", -40, "vehicle_type_ids", 1),
+                new Filter("bodyStyleCoupe", -40, "vehicle_type_ids", 4),
+                new Filter("bodyStyleTruck", -40, "vehicle_type_ids", 9)
         ));
 
         Answer q9_answer3 = new Answer("q9_answer3", "Principalmente en ciudad", List.of(
-                new Filter("transmissionAuto", 40, "icekarId", 0),
-                new Filter("bodyStyleSedan", 40, "icekarId", 0),
-                new Filter("bodyStyleVan", -40, "icekarId", 0),
-                new Filter("bodyStyleTruck", -90, "icekarId", 0)
+                new Filter("transmissionAuto", 40, "gearbox_ids", 3),
+                new Filter("bodyStyleSedan", 40, "vehicle_type_ids", 2),
+                new Filter("bodyStyleVan", -40, "vehicle_type_ids", 6),
+                new Filter("bodyStyleTruck", -90, "vehicle_type_ids", 9)
         ));
 
         Question q9 = new Question("9", 3, "¿Qué tipo de terreno sueles recorrer con mayor frecuencia?",
@@ -183,13 +183,13 @@ public class InsertDefaultQuestionsData {
 
         //Question 10
         Answer q10_answer1 = new Answer("q10_answer1", "Cómoda y relajada", List.of(
-                new Filter("transmissionAuto", 40, "icekarId", 0)
+                new Filter("transmissionAuto", 40, "gearbox_ids", 3)
         ));
 
         Answer q10_answer2 = new Answer("q10_answer2", "Más interactiva y deportiva", List.of(
-                new Filter("transmissionManual", 40, "icekarId", 0),
-                new Filter("transmissionSemi", 40, "icekarId", 0),
-                new Filter("cv200", 40, "icekarId", 0)
+                new Filter("transmissionManual", 40, "gearbox_ids", 1),
+                new Filter("transmissionSemi", 40, "gearbox_ids", 2),
+                new Filter("cv200", 40, "min_cv", 200)
         ));
 
         Question q10 = new Question("10", 4, "¿Qué tipo de experiencia de conducción te gusta?",
@@ -197,38 +197,38 @@ public class InsertDefaultQuestionsData {
 
         //Question 11
         Answer q11_answer1 = new Answer("q11_answer1", "Viajar o hacer road trips.", List.of(
-                new Filter("bodyStyleVan", 20, "icekarId", 0),
-                new Filter("bodyStyleMPV", 20, "icekarId", 0),
-                new Filter("bodyStyleFamily", 20, "icekarId", 0),
-                new Filter("bodyStyleSedan", 10, "icekarId", 0),
-                new Filter("bodyStyleTruck", -50, "icekarId", 0)
+                new Filter("bodyStyleVan", 20, "vehicle_type_ids", 6),
+                new Filter("bodyStyleMPV", 20, "vehicle_type_ids", 5),
+                new Filter("bodyStyleFamily", 20, "vehicle_type_ids", 3),
+                new Filter("bodyStyleSedan", 10, "vehicle_type_ids", 2),
+                new Filter("bodyStyleTruck", -50, "vehicle_type_ids", 9)
         ));
 
         Answer q11_answer2 = new Answer("q11_answer2", "Practicar deportes al aire libre.", List.of(
-                new Filter("bodyStylePickUp", 20, "icekarId", 0),
-                new Filter("bodyStyleVan", 20, "icekarId", 0),
-                new Filter("bodyStyleSedan", 10, "icekarId", 0),
-                new Filter("bodyStyleTruck", -50, "icekarId", 0)
+                new Filter("bodyStylePickUp", 20, "vehicle_type_ids", 8),
+                new Filter("bodyStyleVan", 20, "vehicle_type_ids", 6),
+                new Filter("bodyStyleSedan", 10, "vehicle_type_ids", 2),
+                new Filter("bodyStyleTruck", -50, "vehicle_type_ids", 9)
         ));
 
         Answer q11_answer3 = new Answer("q11_answer3", "Salir a eventos sociales o reuniones.", List.of(
-                new Filter("bodyStyleSedan", 20, "icekarId", 0),
-                new Filter("bodyStyleCoupe", 20, "icekarId", 0),
-                new Filter("bodyStyleTruck", -20, "icekarId", 0),
-                new Filter("bodyStyleVan", -20, "icekarId", 0),
-                new Filter("bodyStylePickUp", -20, "icekarId", 0)
+                new Filter("bodyStyleSedan", 20, "vehicle_type_ids", 2),
+                new Filter("bodyStyleCoupe", 20, "vehicle_type_ids", 4),
+                new Filter("bodyStyleTruck", -20, "vehicle_type_ids", 9),
+                new Filter("bodyStyleVan", -20, "vehicle_type_ids", 6),
+                new Filter("bodyStylePickUp", -20, "vehicle_type_ids", 8)
         ));
 
         Answer q11_answer4 = new Answer("q11_answer4", "Cargar equipaje o mercancía.", List.of(
-                new Filter("bodyStyleVan", 90, "icekarId", 0),
-                new Filter("bodyStylePickUp", 90, "icekarId", 0),
-                new Filter("bodyStyleTruck", 90, "icekarId", 0),
-                new Filter("bodyStyleFamily", 10, "icekarId", 0),
-                new Filter("bodyStyleMPV", 10, "icekarId", 0),
-                new Filter("bodyStyle4x4", 10, "icekarId", 0),
-                new Filter("bodyStyleSedan", -90, "icekarId", 0),
-                new Filter("bodyStyleCoupe", -90, "icekarId", 0),
-                new Filter("bodyStyleConvertible", -90, "icekarId", 0)
+                new Filter("bodyStyleVan", 90, "vehicle_type_ids", 6),
+                new Filter("bodyStylePickUp", 90, "vehicle_type_ids", 8),
+                new Filter("bodyStyleTruck", 90, "vehicle_type_ids", 9),
+                new Filter("bodyStyleFamily", 10, "vehicle_type_ids", 3),
+                new Filter("bodyStyleMPV", 10, "vehicle_type_ids", 5),
+                new Filter("bodyStyle4x4", 10, "vehicle_type_ids", 7),
+                new Filter("bodyStyleSedan", -90, "vehicle_type_ids", 2),
+                new Filter("bodyStyleCoupe", -90, "vehicle_type_ids", 4),
+                new Filter("bodyStyleConvertible", -90, "vehicle_type_ids", 1)
         ));
 
         Question q11 = new Question("11", 3, "¿Qué tipo de actividades realizas con mayor frecuencia " +
@@ -236,32 +236,32 @@ public class InsertDefaultQuestionsData {
 
         //Question 12
         Answer q12_answer1 = new Answer("q12_answer1", "Estilo clásico y elegante", List.of(
-                new Filter("bodyStyleConvertible", 20, "icekarId", 0),
-                new Filter("bodyStyleCoupe", 20, "icekarId", 0),
-                new Filter("bodyStyleSedan", 10, "icekarId", 0),
-                new Filter("bodyStyleFamily", -10, "icekarId", 0),
-                new Filter("bodyStyleMPV", -10, "icekarId", 0),
-                new Filter("bodyStyleVan", -20, "icekarId", 0),
-                new Filter("bodyStyleTruck", -50, "icekarId", 0)
+                new Filter("bodyStyleConvertible", 20, "vehicle_type_ids", 1),
+                new Filter("bodyStyleCoupe", 20, "vehicle_type_ids", 4),
+                new Filter("bodyStyleSedan", 10, "vehicle_type_ids", 2),
+                new Filter("bodyStyleFamily", -10, "vehicle_type_ids", 3),
+                new Filter("bodyStyleMPV", -10, "vehicle_type_ids", 5),
+                new Filter("bodyStyleVan", -20, "vehicle_type_ids", 6),
+                new Filter("bodyStyleTruck", -50, "vehicle_type_ids", 9)
         ));
 
         Answer q12_answer2 = new Answer("q12_answer2", "Diseño deportivo y llamativo", List.of(
-                new Filter("bodyStyleConvertible", 20, "icekarId", 0),
-                new Filter("bodyStyleCoupe", 20, "icekarId", 0),
-                new Filter("bodyStyleFamily", -10, "icekarId", 0),
-                new Filter("bodyStyleMPV", -10, "icekarId", 0),
-                new Filter("bodyStyleVan", -10, "icekarId", 0),
-                new Filter("bodyStyleTruck", -10, "icekarId", 0),
-                new Filter("bodyStyle4x4", -10, "icekarId", 0),
-                new Filter("bodyStylePickUp", -90, "icekarId", 0)
+                new Filter("bodyStyleConvertible", 20, "vehicle_type_ids", 1),
+                new Filter("bodyStyleCoupe", 20, "vehicle_type_ids", 4),
+                new Filter("bodyStyleFamily", -10, "vehicle_type_ids", 3),
+                new Filter("bodyStyleMPV", -10, "vehicle_type_ids", 5),
+                new Filter("bodyStyleVan", -10, "vehicle_type_ids", 6),
+                new Filter("bodyStyleTruck", -10, "vehicle_type_ids", 9),
+                new Filter("bodyStyle4x4", -10, "vehicle_type_ids", 7),
+                new Filter("bodyStylePickUp", -90, "vehicle_type_ids", 8)
         ));
 
         Answer q12_answer3 = new Answer("q12_answer3", "Estilo versátil y funcional", List.of(
-                new Filter("bodyStyleSedan", 30, "icekarId", 0),
-                new Filter("bodyStyleFamily", 20, "icekarId", 0),
-                new Filter("bodyStyleMPV", 20, "icekarId", 0),
-                new Filter("bodyStyleConvertible", -10, "icekarId", 0),
-                new Filter("bodyStyleTruck", -10, "icekarId", 0)
+                new Filter("bodyStyleSedan", 30, "vehicle_type_ids", 2),
+                new Filter("bodyStyleFamily", 20, "vehicle_type_ids", 3),
+                new Filter("bodyStyleMPV", 20, "vehicle_type_ids", 5),
+                new Filter("bodyStyleConvertible", -10, "vehicle_type_ids", 1),
+                new Filter("bodyStyleTruck", -10, "vehicle_type_ids", 9)
         ));
 
         Question q12 = new Question("12", 3, "¿Cuál es tu preferencia en cuanto al diseño exterior del " +
@@ -270,20 +270,20 @@ public class InsertDefaultQuestionsData {
         //Question 13
         Answer q13_answer1 = new Answer("q13_answer1", "Me gustan los avances tecnológicos y sistemas de " +
                 "asistencia avanzados", List.of(
-                new Filter("brandAudi", -20, "icekarId", 0),
-                new Filter("brandBMW", 40, "icekarId", 0),
-                new Filter("brandTesla", 40, "icekarId", 0),
-                new Filter("brandCitroen", -20, "icekarId", 0),
-                new Filter("brandHyundai", -20, "icekarId", 0)
+                new Filter("brandAudi", -20, "brand_id", 21),
+                new Filter("brandBMW", 40, "brand_id", 32),
+                new Filter("brandTesla", 40, "brand_id", 226),
+                new Filter("brandCitroen", -20, "brand_id", 52),
+                new Filter("brandHyundai", -20, "brand_id", 111)
         ));
 
         Answer q13_answer2 = new Answer("q13_answer2", "Busco un equilibrio entre tecnología y funcionalidad",
                 List.of(
-                        new Filter("brandToyota", 30, "icekarId", 0),
-                        new Filter("brandHonda", 30, "icekarId", 0),
-                        new Filter("brandCFord", 30, "icekarId", 0),
-                        new Filter("brandAudi", -40, "icekarId", 0),
-                        new Filter("brandTesla", -40, "icekarId", 0)
+                        new Filter("brandToyota", 30, "brand_id", 228),
+                        new Filter("brandHonda", 30, "brand_id", 108),
+                        new Filter("brandFord", 30, "brand_id", 87),
+                        new Filter("brandAudi", -40, "brand_id", 21),
+                        new Filter("brandTesla", -40, "brand_id", 226)
                 ));
 
         Answer q13_answer3 = new Answer("q13_answer3", "No es una prioridad para mí", List.of());
@@ -293,15 +293,15 @@ public class InsertDefaultQuestionsData {
 
         //Question 14
         Answer q14_answer1 = new Answer("q14_answer1", "Confortable y relajada", List.of(
-                new Filter("transmissionAuto", 40, "icekarId", 0),
-                new Filter("transmissionSemi", -30, "icekarId", 0),
-                new Filter("transmissionManual", -30, "icekarId", 0)
+                new Filter("transmissionAuto", 40, "gearbox_ids", 3),
+                new Filter("transmissionSemi", -30, "gearbox_ids", 2),
+                new Filter("transmissionManual", -30, "gearbox_ids", 1)
         ));
 
         Answer q14_answer2 = new Answer("q14_answer2", "Más deportiva y dinámica", List.of(
-                new Filter("transmissionSemi", 20, "icekarId", 0),
-                new Filter("transmissionManual", 20, "icekarId", 0),
-                new Filter("transmissionAuto", -10, "icekarId", 0)
+                new Filter("transmissionSemi", 20, "gearbox_ids", 2),
+                new Filter("transmissionManual", 20, "gearbox_ids", 1),
+                new Filter("transmissionAuto", -10, "gearbox_ids", 3)
         ));
 
         Question q14 = new Question("14", 4, "¿Qué tipo de conducción prefieres?",
@@ -310,21 +310,21 @@ public class InsertDefaultQuestionsData {
         //Question 15
         Answer q15_answer1 = new Answer("q15_answer1", "Alta prioridad en seguridad y sistemas de " +
                 "asistencia avanzados", List.of(
-                new Filter("brandVolvo", 30, "icekarId", 0),
-                new Filter("brandMercedes", 30, "icekarId", 0),
-                new Filter("brandSubaru", 30, "icekarId", 0),
-                new Filter("brandCitroen", -20, "icekarId", 0),
-                new Filter("brandHonda", -20, "icekarId", 0)
+                new Filter("brandVolvo", 30, "brand_id", 242),
+                new Filter("brandMercedes", 30, "brand_id", 157),
+                new Filter("brandSubaru", 30, "brand_id", 218),
+                new Filter("brandCitroen", -20, "brand_id", 52),
+                new Filter("brandHonda", -20, "brand_id", 108)
         ));
 
         Answer q15_answer2 = new Answer("q15_answer2", "Importante, pero sin requerir sistemas avanzados",
                 List.of(
-                        new Filter("brandToyota", 30, "icekarId", 0),
-                        new Filter("brandHonda", 30, "icekarId", 0),
-                        new Filter("brandMazda", 30, "icekarId", 0),
-                        new Filter("brandVolvo", -30, "icekarId", 0),
-                        new Filter("brandMercedes", -30, "icekarId", 0),
-                        new Filter("brandSubaru", -30, "icekarId", 0)
+                        new Filter("brandToyota", 30, "brand_id", 228),
+                        new Filter("brandHonda", 30, "brand_id", 108),
+                        new Filter("brandMazda", 30, "brand_id", 153),
+                        new Filter("brandVolvo", -30, "brand_id", 242),
+                        new Filter("brandMercedes", -30, "brand_id", 157),
+                        new Filter("brandSubaru", -30, "brand_id", 218)
                 ));
 
         Answer q15_answer3 = new Answer("q15_answer3", "No es una preocupación principal", List.of());
@@ -335,15 +335,15 @@ public class InsertDefaultQuestionsData {
         //Question 16
         Answer q16_answer1 = new Answer("q16_answer1", "Espacios reducidos o estacionamiento en la calle",
                 List.of(
-                        new Filter("bodyStyleSedan", 10, "icekarId", 0),
-                        new Filter("bodyStyleCoupe", 10, "icekarId", 0),
-                        new Filter("bodyStyleConvertible", 10, "icekarId", 0),
-                        new Filter("bodyStyleFamily", -10, "icekarId", 0),
-                        new Filter("bodyStyleMPV", -10, "icekarId", 0),
-                        new Filter("bodyStyle4x4", -10, "icekarId", 0),
-                        new Filter("bodyStyleTruck", -40, "icekarId", 0),
-                        new Filter("bodyStylePickUp", -40, "icekarId", 0),
-                        new Filter("bodyStyleVan", -40, "icekarId", 0)
+                        new Filter("bodyStyleSedan", 10, "vehicle_type_ids", 2),
+                        new Filter("bodyStyleCoupe", 10, "vehicle_type_ids", 4),
+                        new Filter("bodyStyleConvertible", 10, "vehicle_type_ids", 1),
+                        new Filter("bodyStyleFamily", -10, "vehicle_type_ids", 3),
+                        new Filter("bodyStyleMPV", -10, "vehicle_type_ids", 5),
+                        new Filter("bodyStyle4x4", -10, "vehicle_type_ids", 7),
+                        new Filter("bodyStyleTruck", -40, "vehicle_type_ids", 9),
+                        new Filter("bodyStylePickUp", -40, "vehicle_type_ids", 8),
+                        new Filter("bodyStyleVan", -40, "vehicle_type_ids", 6)
                 ));
 
         Answer q16_answer2 = new Answer("q16_answer2", "Garaje o estacionamiento amplio", List.of());
@@ -355,21 +355,21 @@ public class InsertDefaultQuestionsData {
         // Question 17
         Answer q17_answer1 = new Answer("q17_answer1", "Conducción suave y cómoda con énfasis en el confort",
                 List.of(
-                        new Filter("brandMercedes", 20, "icekarId", 0),
-                        new Filter("brandVolvo", 20, "icekarId", 0),
-                        new Filter("brandAudi", 20, "icekarId", 0),
-                        new Filter("brandLexus", 20, "icekarId", 0),
-                        new Filter("brandToyota", -10, "icekarId", 0),
-                        new Filter("brandRenault", -10, "icekarId", 0)
+                        new Filter("brandMercedes", 20, "brand_id", 157),
+                        new Filter("brandVolvo", 20, "brand_id", 242),
+                        new Filter("brandAudi", 20, "brand_id", 21),
+                        new Filter("brandLexus", 20, "brand_id", 135),
+                        new Filter("brandToyota", -10, "brand_id", 228),
+                        new Filter("brandRenault", -10, "brand_id", 194)
                 ));
 
         Answer q17_answer2 = new Answer("q17_answer2", "Conducción dinámica y deportiva con un enfoque en el " +
                 "rendimiento", List.of(
-                new Filter("brandPorsche", 50, "icekarId", 0),
-                new Filter("brandAlfaRomeo", 50, "icekarId", 0),
-                new Filter("brandBMW", 50, "icekarId", 0),
-                new Filter("brandToyota", -30, "icekarId", 0),
-                new Filter("brandRenault", -30, "icekarId", 0)
+                new Filter("brandPorsche", 50, "brand_id", 187),
+                new Filter("brandAlfaRomeo", 50, "brand_id", 9),
+                new Filter("brandBMW", 50, "brand_id", 32),
+                new Filter("brandToyota", -30, "brand_id", 228),
+                new Filter("brandRenault", -30, "brand_id", 194)
         ));
 
         Answer q17_answer3 = new Answer("q17_answer3", "No tengo preferencia específica en la experiencia de " +
@@ -381,22 +381,22 @@ public class InsertDefaultQuestionsData {
         //Question 18
         Answer q18_answer1 = new Answer("q18_answer1", "Busco un vehículo de lujo premium con acabados de alta " +
                 "calidad", List.of(
-                new Filter("brandMercedes", 40, "icekarId", 0),
-                new Filter("brandBMW", 40, "icekarId", 0),
-                new Filter("brandLexus", 40, "icekarId", 0),
-                new Filter("brandAudi", 40, "icekarId", 0),
-                new Filter("brandAlfaRomeo", 40, "icekarId", 0),
-                new Filter("brandToyota", -30, "icekarId", 0),
-                new Filter("brandVolvo", -30, "icekarId", 0)
+                new Filter("brandMercedes", 40, "brand_id", 157),
+                new Filter("brandBMW", 40, "brand_id", 32),
+                new Filter("brandLexus", 40, "brand_id", 135),
+                new Filter("brandAudi", 40, "brand_id", 21),
+                new Filter("brandAlfaRomeo", 40, "brand_id", 9),
+                new Filter("brandToyota", -30, "brand_id", 228),
+                new Filter("brandVolvo", -30, "brand_id", 242)
         ));
 
         Answer q18_answer2 = new Answer("q18_answer2", "Prefiero un vehículo de gama media con características " +
                 "cómodas y elegantes", List.of(
-                new Filter("brandVolkswagen", 30, "icekarId", 0),
-                new Filter("brandFord", 30, "icekarId", 0),
-                new Filter("brandHyundai", 30, "icekarId", 0),
-                new Filter("brandMercedes", -40, "icekarId", 0),
-                new Filter("brandBMW", -40, "icekarId", 0)
+                new Filter("brandVolkswagen", 30, "brand_id", 241),
+                new Filter("brandFord", 30, "brand_id", 87),
+                new Filter("brandHyundai", 30, "brand_id", 111),
+                new Filter("brandMercedes", -40, "brand_id", 157),
+                new Filter("brandBMW", -40, "brand_id", 32)
         ));
 
         Question q18 = new Question("18", 5, "¿Qué nivel de lujo y prestigio deseas en tu vehículo?",
@@ -405,19 +405,19 @@ public class InsertDefaultQuestionsData {
         //Question 19
         Answer q19_answer1 = new Answer("q19_answer1", "Alta eficiencia energética y opciones de vehículos " +
                 "eléctricos/híbridos", List.of(
-                new Filter("brandToyota", 30, "icekarId", 0),
-                new Filter("brandTesla", 30, "icekarId", 0),
-                new Filter("brandNissan", 30, "icekarId", 0),
-                new Filter("brandVolkswagen", -20, "icekarId", 0),
-                new Filter("brandBMW", -20, "icekarId", 0),
-                new Filter("brandLexus", -20, "icekarId", 0)
+                new Filter("brandToyota", 30, "brand_id", 228),
+                new Filter("brandTesla", 30, "brand_id", 226),
+                new Filter("brandNissan", 30, "brand_id", 172),
+                new Filter("brandVolkswagen", -20, "brand_id", 241),
+                new Filter("brandBMW", -20, "brand_id", 32),
+                new Filter("brandLexus", -20, "brand_id", 135)
         ));
 
         Answer q19_answer2 = new Answer("q19_answer2", "Busco un equilibrio entre rendimiento y eficiencia",
                 List.of(
-                        new Filter("brandHonda", 20, "icekarId", 0),
-                        new Filter("brandVolkswagen", 20, "icekarId", 0),
-                        new Filter("brandFord", 20, "icekarId", 0)
+                        new Filter("brandHonda", 20, "brand_id", 108),
+                        new Filter("brandVolkswagen", 20, "brand_id", 241),
+                        new Filter("brandFord", 20, "brand_id", 87)
                 ));
 
         Answer q19_answer3 = new Answer("q19_answer3", "No es una preocupación principal", List.of());
@@ -428,31 +428,31 @@ public class InsertDefaultQuestionsData {
         //Question 20
         Answer q20_answer1 = new Answer("q20_answer1", "Soy un conductor novato y prefiero un coche fácil de " +
                 "manejar", List.of(
-                new Filter("bodyStyleSedan", 20, "icekarId", 0),
-                new Filter("transmissionAuto", 20, "icekarId", 0),
-                new Filter("brandBMW", -10, "icekarId", 0),
-                new Filter("cv200", -10, "icekarId", 0),
-                new Filter("bodyStyle4x4", -10, "icekarId", 0),
-                new Filter("bodyStylePickUp", -10, "icekarId", 0),
-                new Filter("bodyStyleTruck", -10, "icekarId", 0),
-                new Filter("bodyStyleVan", -10, "icekarId", 0)
+                new Filter("bodyStyleSedan", 20, "vehicle_type_ids", 2),
+                new Filter("transmissionAuto", 20, "gearbox_ids", 3),
+                new Filter("brandBMW", -10, "brand_id", 32),
+                new Filter("cv200", -10, "min_cv", 200),
+                new Filter("bodyStyle4x4", -10, "vehicle_type_ids", 7),
+                new Filter("bodyStylePickUp", -10, "vehicle_type_ids", 8),
+                new Filter("bodyStyleTruck", -10, "vehicle_type_ids", 9),
+                new Filter("bodyStyleVan", -10, "vehicle_type_ids", 6)
         ));
 
         Answer q20_answer2 = new Answer("q20_answer2", "Tengo experiencia pero prefiero una conducción cómoda" +
                 " y relajada", List.of(
-                new Filter("bodyStyleSedan", 20, "icekarId", 0),
-                new Filter("transmissionAuto", 20, "icekarId", 0),
-                new Filter("transmissionSemi", 20, "icekarId", 0),
-                new Filter("transmissionManual", -20, "icekarId", 0)
+                new Filter("bodyStyleSedan", 20, "vehicle_type_ids", 2),
+                new Filter("transmissionAuto", 20, "gearbox_ids", 3),
+                new Filter("transmissionSemi", 20, "gearbox_ids", 2),
+                new Filter("transmissionManual", -20, "gearbox_ids", 1)
         ));
 
         Answer q20_answer3 = new Answer("q20_answer3", "Soy un conductor experimentado", List.of(
-                new Filter("bodyStyleCoupe", 30, "icekarId", 0),
-                new Filter("bodyStyle4x4", 30, "icekarId", 0),
-                new Filter("transmissionManual", 30, "icekarId", 0),
-                new Filter("cv200", 30, "icekarId", 0),
-                new Filter("transmissionAuto", -20, "icekarId", 0),
-                new Filter("transmissionSemi", -20, "icekarId", 0)
+                new Filter("bodyStyleCoupe", 30, "vehicle_type_ids", 4),
+                new Filter("bodyStyle4x4", 30, "vehicle_type_ids", 7),
+                new Filter("transmissionManual", 30, "gearbox_ids", 1),
+                new Filter("cv200", 30, "min_cv", 200),
+                new Filter("transmissionAuto", -20, "gearbox_ids", 3),
+                new Filter("transmissionSemi", -20, "gearbox_ids", 2)
         ));
 
         Answer q20_answer4 = new Answer("q20_answer4", "No tengo preferencia en cuanto a experiencia de conducción",
@@ -463,11 +463,11 @@ public class InsertDefaultQuestionsData {
 
         //Question 21
         Answer q21_answer1 = new Answer("q21_answer1", "Prefiero un vehículo usado anteriormente por otra persona.",
-                List.of(new Filter("km1000", 100, "icekarId", 0)));
+                List.of(new Filter("km10000", 100, "min_kms", 10000)));
 
         Answer q21_answer2 = new Answer("q21_answer2", "Prefiero un vehículo que no tenga uso." +
                 "persona.", List.of(
-                        new Filter("km1000", -100, "icekarId", 0)));
+                        new Filter("km1000", -100, "min_kms", 10000)));
 
         Answer q21_answer3 = new Answer("q21_answer3", "No tiene importancia para mí.", List.of());
 
@@ -492,5 +492,4 @@ public class InsertDefaultQuestionsData {
         questionService.addQuestion(q20);
         questionService.addQuestion(q21);
     }
-
 }
