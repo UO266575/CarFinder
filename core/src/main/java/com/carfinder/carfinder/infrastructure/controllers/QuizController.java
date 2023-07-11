@@ -24,7 +24,7 @@ public class QuizController {
     }
 
     @PostMapping("/answer/{answerId}")
-    public void userAnswerSelection(@PathVariable String answerId){
+    public void userAnswerSelection(@PathVariable String answerId) {
         quizService.processAnswerSelection(answerService.getAnswerById(answerId));
     }
 

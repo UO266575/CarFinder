@@ -15,14 +15,14 @@ public class Quiz {
 
     public void calculateFilter(Filter filter) {
         boolean found = false;
-        for(Filter existingFilter : filters){
-            if(filter.internalIdentificator.equals(existingFilter.internalIdentificator)){
+        for (Filter existingFilter : filters) {
+            if (filter.internalIdentificator.equals(existingFilter.internalIdentificator)) {
                 existingFilter.value += filter.value;
                 found = true;
                 break;
             }
         }
-        if(!found){
+        if (!found) {
             filters.add(filter);
         }
     }
@@ -31,8 +31,8 @@ public class Quiz {
         List<Filter> higherFilters = new ArrayList<Filter>();
         int maxBrandIdValue = 0;
         Filter maxBrandIdFilter = null;
-        for (Filter filter: filters) {
-            switch (filter.externalIdentificator){
+        for (Filter filter : filters) {
+            switch (filter.externalIdentificator) {
                 case "brand_id":
                     if (filter.value > maxBrandIdValue) {
                         maxBrandIdValue = filter.value;
@@ -40,13 +40,13 @@ public class Quiz {
                     }
                     break;
                 case "vehicle_type_ids", "emission_sticker_ids", "gearbox_ids", "min_kms", "min_cv":
-                    if(filter.value > 40){
+                    if (filter.value > 40) {
                         higherFilters.add(filter);
                     }
                     break;
             }
         }
-        if(maxBrandIdValue > 0){
+        if (maxBrandIdValue > 0) {
             higherFilters.add(maxBrandIdFilter);
         }
         return higherFilters;

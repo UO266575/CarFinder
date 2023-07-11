@@ -25,10 +25,10 @@ public class QuizService {
 
 
     public void processAnswerSelection(Answer answer) {
-        answer.score().forEach( i -> quiz.calculateFilter(i));
+        answer.score().forEach(i -> quiz.calculateFilter(i));
     }
 
-    public List<Filter> getHigherFilters(){
+    public List<Filter> getHigherFilters() {
         return quiz.getHigherFilters();
     }
 
