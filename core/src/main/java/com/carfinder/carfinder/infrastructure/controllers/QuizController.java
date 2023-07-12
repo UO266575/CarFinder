@@ -29,8 +29,9 @@ public class QuizController {
     }
 
     @PostMapping("/answer/bulk")
-    public void userAnswersSelection(@RequestBody List<String> answers) {
+    public ResponseEntity<String> userAnswersSelection(@RequestBody List<String> answers) {
         quizService.processAnswerSelection(answers);
+        return ResponseEntity.ok(quizService.getCarAds());
     }
 
     @GetMapping("/round")
