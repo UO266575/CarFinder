@@ -12,6 +12,9 @@ public class Filter {
 
     public int externalValue;
 
+    public Filter() {
+    }
+
     public Filter(String internalIdentificator, int value, String externalIdentificator, int externalValue) {
         this.internalIdentificator = internalIdentificator;
         this.value = value;
