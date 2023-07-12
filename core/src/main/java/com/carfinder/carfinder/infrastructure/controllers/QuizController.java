@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("quiz")
+@CrossOrigin(origins = "http://localhost:5173/")
 public class QuizController {
 
     private final AnswerService answerService;
