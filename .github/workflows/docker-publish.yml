@@ -12,7 +12,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@v4
       with:
-        name: uo266575/carfinder-backend
+        name: uo266575/CarFinder_Backend
         username: ${{ github.actor }}
         password: ${{ secrets.GH_TOKEN }}
         registry: ghcr.io
