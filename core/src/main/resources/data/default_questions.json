@@ -1,0 +1,1751 @@
+[
+  {
+    "id": "5",
+    "type": 2,
+    "text": "¿Qué adjetivo definiría mejor su estilo de vida?",
+    "answers": [
+      {
+        "id": "q5_answer1",
+        "text": "Activo y aventurero.",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 5,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          }
+        ]
+      },
+      {
+        "id": "q5_answer2",
+        "text": "Elegante y sofisticado.",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q5_answer3",
+        "text": "Práctico y funcional.",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q5_answer4",
+        "text": "Deportivo y dinámico.",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "type": 2,
+    "text": "¿Cómo te gusta disfrutar del viaje?",
+    "answers": [
+      {
+        "id": "q6_answer1",
+        "text": "Confort y espacio",
+        "score": [
+          {
+            "internalIdentificator": "doors5",
+            "value": 20,
+            "externalIdentificator": "icekarId",
+            "externalValue": 0
+          },
+          {
+            "internalIdentificator": "seats5",
+            "value": 20,
+            "externalIdentificator": "icekarId",
+            "externalValue": 0
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          }
+        ]
+      },
+      {
+        "id": "q6_answer2",
+        "text": "Velocidad y potencia",
+        "score": [
+          {
+            "internalIdentificator": "cv200",
+            "value": 20,
+            "externalIdentificator": "min_cv",
+            "externalValue": 200
+          }
+        ]
+      },
+      {
+        "id": "q6_answer3",
+        "text": "Sensación de libertad",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": 5,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -50,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q6_answer4",
+        "text": "Eficiencia y ahorro",
+        "score": [
+          {
+            "internalIdentificator": "label0",
+            "value": 50,
+            "externalIdentificator": "emission_sticker_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "labelEco",
+            "value": 50,
+            "externalIdentificator": "emission_sticker_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "labelB",
+            "value": -10,
+            "externalIdentificator": "emission_sticker_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "labelC",
+            "value": -50,
+            "externalIdentificator": "emission_sticker_ids",
+            "externalValue": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "type": 3,
+    "text": "¿Cuál es tu entorno de conducción habitual?",
+    "answers": [
+      {
+        "id": "q7_answer1",
+        "text": "Ciudad y tráfico urbano",
+        "score": [
+          {
+            "internalIdentificator": "transmissionAuto",
+            "value": 40,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q7_answer2",
+        "text": "Carreteras y largos trayectos",
+        "score": [
+          {
+            "internalIdentificator": "transmissionManual",
+            "value": 40,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "transmissionSemi",
+            "value": 40,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -30,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q7_answer3",
+        "text": "Terrenos irregulares y todo terreno",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": 40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": 40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "type": 3,
+    "text": "¿Qué tipo de actividad sueles realizar con tu coche?",
+    "answers": [
+      {
+        "id": "q8_answer1",
+        "text": "Trabajo y desplazamientos diarios",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -100,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q8_answer2",
+        "text": "Viajes en familia o con amigos",
+        "score": [
+          {
+            "internalIdentificator": "doors5",
+            "value": 20,
+            "externalIdentificator": "icekarId",
+            "externalValue": 0
+          },
+          {
+            "internalIdentificator": "seats5",
+            "value": 20,
+            "externalIdentificator": "icekarId",
+            "externalValue": 0
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q8_answer3",
+        "text": "Transporte de mercancías o carga",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": 90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": 90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": 90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": -90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": -90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "type": 3,
+    "text": "¿Qué tipo de terreno sueles recorrer con mayor frecuencia?",
+    "answers": [
+      {
+        "id": "q9_answer1",
+        "text": "Autopistas, autovías, carreteras convencionales y vías para automóviles",
+        "score": []
+      },
+      {
+        "id": "q9_answer2",
+        "text": "Terrenos irregulares o todoterreno",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": 40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": 40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q9_answer3",
+        "text": "Principalmente en ciudad",
+        "score": [
+          {
+            "internalIdentificator": "transmissionAuto",
+            "value": 40,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "type": 4,
+    "text": "¿Qué tipo de experiencia de conducción te gusta?",
+    "answers": [
+      {
+        "id": "q10_answer1",
+        "text": "Cómoda y relajada",
+        "score": [
+          {
+            "internalIdentificator": "transmissionAuto",
+            "value": 40,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 3
+          }
+        ]
+      },
+      {
+        "id": "q10_answer2",
+        "text": "Más interactiva y deportiva",
+        "score": [
+          {
+            "internalIdentificator": "transmissionManual",
+            "value": 40,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "transmissionSemi",
+            "value": 40,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "cv200",
+            "value": 40,
+            "externalIdentificator": "min_cv",
+            "externalValue": 200
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "type": 3,
+    "text": "¿Qué tipo de actividades realizas con mayor frecuencia en tu tiempo libre?",
+    "answers": [
+      {
+        "id": "q11_answer1",
+        "text": "Viajar o hacer road trips.",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -50,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q11_answer2",
+        "text": "Practicar deportes al aire libre.",
+        "score": [
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -50,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q11_answer3",
+        "text": "Salir a eventos sociales o reuniones.",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": -20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          }
+        ]
+      },
+      {
+        "id": "q11_answer4",
+        "text": "Cargar equipaje o mercancía.",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": 90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": 90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": 90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": -90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": -90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "type": 3,
+    "text": "¿Cuál es tu preferencia en cuanto al diseño exterior del vehículo?",
+    "answers": [
+      {
+        "id": "q12_answer1",
+        "text": "Estilo clásico y elegante",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -50,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      },
+      {
+        "id": "q12_answer2",
+        "text": "Diseño deportivo y llamativo",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          },
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": -90,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          }
+        ]
+      },
+      {
+        "id": "q12_answer3",
+        "text": "Estilo versátil y funcional",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 30,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "type": 5,
+    "text": "¿Cuál es tu nivel de experiencia y preferencia en cuanto a la tecnología del vehículo?",
+    "answers": [
+      {
+        "id": "q13_answer1",
+        "text": "Me gustan los avances tecnológicos y sistemas de asistencia avanzados",
+        "score": [
+          {
+            "internalIdentificator": "brandAudi",
+            "value": -20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 21
+          },
+          {
+            "internalIdentificator": "brandBMW",
+            "value": 40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 32
+          },
+          {
+            "internalIdentificator": "brandTesla",
+            "value": 40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 226
+          },
+          {
+            "internalIdentificator": "brandCitroen",
+            "value": -20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 52
+          },
+          {
+            "internalIdentificator": "brandHyundai",
+            "value": -20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 111
+          }
+        ]
+      },
+      {
+        "id": "q13_answer2",
+        "text": "Busco un equilibrio entre tecnología y funcionalidad",
+        "score": [
+          {
+            "internalIdentificator": "brandToyota",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 228
+          },
+          {
+            "internalIdentificator": "brandHonda",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 108
+          },
+          {
+            "internalIdentificator": "brandFord",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 87
+          },
+          {
+            "internalIdentificator": "brandAudi",
+            "value": -40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 21
+          },
+          {
+            "internalIdentificator": "brandTesla",
+            "value": -40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 226
+          }
+        ]
+      },
+      {
+        "id": "q13_answer3",
+        "text": "No es una prioridad para mí",
+        "score": []
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "type": 4,
+    "text": "¿Qué tipo de conducción prefieres?",
+    "answers": [
+      {
+        "id": "q14_answer1",
+        "text": "Confortable y relajada",
+        "score": [
+          {
+            "internalIdentificator": "transmissionAuto",
+            "value": 40,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "transmissionSemi",
+            "value": -30,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "transmissionManual",
+            "value": -30,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 1
+          }
+        ]
+      },
+      {
+        "id": "q14_answer2",
+        "text": "Más deportiva y dinámica",
+        "score": [
+          {
+            "internalIdentificator": "transmissionSemi",
+            "value": 20,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "transmissionManual",
+            "value": 20,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "transmissionAuto",
+            "value": -10,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "type": 5,
+    "text": "¿Cuál es tu nivel de importancia en cuanto a la seguridad del vehículo?",
+    "answers": [
+      {
+        "id": "q15_answer1",
+        "text": "Alta prioridad en seguridad y sistemas de asistencia avanzados",
+        "score": [
+          {
+            "internalIdentificator": "brandVolvo",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 242
+          },
+          {
+            "internalIdentificator": "brandMercedes",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 157
+          },
+          {
+            "internalIdentificator": "brandSubaru",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 218
+          },
+          {
+            "internalIdentificator": "brandCitroen",
+            "value": -20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 52
+          },
+          {
+            "internalIdentificator": "brandHonda",
+            "value": -20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 108
+          }
+        ]
+      },
+      {
+        "id": "q15_answer2",
+        "text": "Importante, pero sin requerir sistemas avanzados",
+        "score": [
+          {
+            "internalIdentificator": "brandToyota",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 228
+          },
+          {
+            "internalIdentificator": "brandHonda",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 108
+          },
+          {
+            "internalIdentificator": "brandMazda",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 153
+          },
+          {
+            "internalIdentificator": "brandVolvo",
+            "value": -30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 242
+          },
+          {
+            "internalIdentificator": "brandMercedes",
+            "value": -30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 157
+          },
+          {
+            "internalIdentificator": "brandSubaru",
+            "value": -30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 218
+          }
+        ]
+      },
+      {
+        "id": "q15_answer3",
+        "text": "No es una preocupación principal",
+        "score": []
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "type": 3,
+    "text": "¿Qué tipo de estacionamiento sueles utilizar con mayor frecuencia?",
+    "answers": [
+      {
+        "id": "q16_answer1",
+        "text": "Espacios reducidos o estacionamiento en la calle",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyleConvertible",
+            "value": 10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "bodyStyleFamily",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "bodyStyleMPV",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 5
+          },
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -40,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          }
+        ]
+      },
+      {
+        "id": "q16_answer2",
+        "text": "Garaje o estacionamiento amplio",
+        "score": []
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "type": 5,
+    "text": "¿Qué tipo de experiencia de conducción prefieres?",
+    "answers": [
+      {
+        "id": "q17_answer1",
+        "text": "Conducción suave y cómoda con énfasis en el confort",
+        "score": [
+          {
+            "internalIdentificator": "brandMercedes",
+            "value": 20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 157
+          },
+          {
+            "internalIdentificator": "brandVolvo",
+            "value": 20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 242
+          },
+          {
+            "internalIdentificator": "brandAudi",
+            "value": 20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 21
+          },
+          {
+            "internalIdentificator": "brandLexus",
+            "value": 20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 135
+          },
+          {
+            "internalIdentificator": "brandToyota",
+            "value": -10,
+            "externalIdentificator": "brand_id",
+            "externalValue": 228
+          },
+          {
+            "internalIdentificator": "brandRenault",
+            "value": -10,
+            "externalIdentificator": "brand_id",
+            "externalValue": 194
+          }
+        ]
+      },
+      {
+        "id": "q17_answer2",
+        "text": "Conducción dinámica y deportiva con un enfoque en el rendimiento",
+        "score": [
+          {
+            "internalIdentificator": "brandPorsche",
+            "value": 50,
+            "externalIdentificator": "brand_id",
+            "externalValue": 187
+          },
+          {
+            "internalIdentificator": "brandAlfaRomeo",
+            "value": 50,
+            "externalIdentificator": "brand_id",
+            "externalValue": 9
+          },
+          {
+            "internalIdentificator": "brandBMW",
+            "value": 50,
+            "externalIdentificator": "brand_id",
+            "externalValue": 32
+          },
+          {
+            "internalIdentificator": "brandToyota",
+            "value": -30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 228
+          },
+          {
+            "internalIdentificator": "brandRenault",
+            "value": -30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 194
+          }
+        ]
+      },
+      {
+        "id": "q17_answer3",
+        "text": "No tengo preferencia específica en la experiencia de conducción",
+        "score": []
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "type": 5,
+    "text": "¿Qué nivel de lujo y prestigio deseas en tu vehículo?",
+    "answers": [
+      {
+        "id": "q18_answer1",
+        "text": "Busco un vehículo de lujo premium con acabados de alta calidad",
+        "score": [
+          {
+            "internalIdentificator": "brandMercedes",
+            "value": 40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 157
+          },
+          {
+            "internalIdentificator": "brandBMW",
+            "value": 40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 32
+          },
+          {
+            "internalIdentificator": "brandLexus",
+            "value": 40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 135
+          },
+          {
+            "internalIdentificator": "brandAudi",
+            "value": 40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 21
+          },
+          {
+            "internalIdentificator": "brandAlfaRomeo",
+            "value": 40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 9
+          },
+          {
+            "internalIdentificator": "brandToyota",
+            "value": -30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 228
+          },
+          {
+            "internalIdentificator": "brandVolvo",
+            "value": -30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 242
+          }
+        ]
+      },
+      {
+        "id": "q18_answer2",
+        "text": "Prefiero un vehículo de gama media con características cómodas y elegantes",
+        "score": [
+          {
+            "internalIdentificator": "brandVolkswagen",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 241
+          },
+          {
+            "internalIdentificator": "brandFord",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 87
+          },
+          {
+            "internalIdentificator": "brandHyundai",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 111
+          },
+          {
+            "internalIdentificator": "brandMercedes",
+            "value": -40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 157
+          },
+          {
+            "internalIdentificator": "brandBMW",
+            "value": -40,
+            "externalIdentificator": "brand_id",
+            "externalValue": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "type": 5,
+    "text": "¿Cuál es tu preferencia en términos de consumo de combustible?",
+    "answers": [
+      {
+        "id": "q19_answer1",
+        "text": "Alta eficiencia energética y opciones de vehículos eléctricos/híbridos",
+        "score": [
+          {
+            "internalIdentificator": "brandToyota",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 228
+          },
+          {
+            "internalIdentificator": "brandTesla",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 226
+          },
+          {
+            "internalIdentificator": "brandNissan",
+            "value": 30,
+            "externalIdentificator": "brand_id",
+            "externalValue": 172
+          },
+          {
+            "internalIdentificator": "brandVolkswagen",
+            "value": -20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 241
+          },
+          {
+            "internalIdentificator": "brandBMW",
+            "value": -20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 32
+          },
+          {
+            "internalIdentificator": "brandLexus",
+            "value": -20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 135
+          }
+        ]
+      },
+      {
+        "id": "q19_answer2",
+        "text": "Busco un equilibrio entre rendimiento y eficiencia",
+        "score": [
+          {
+            "internalIdentificator": "brandHonda",
+            "value": 20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 108
+          },
+          {
+            "internalIdentificator": "brandVolkswagen",
+            "value": 20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 241
+          },
+          {
+            "internalIdentificator": "brandFord",
+            "value": 20,
+            "externalIdentificator": "brand_id",
+            "externalValue": 87
+          }
+        ]
+      },
+      {
+        "id": "q19_answer3",
+        "text": "No es una preocupación principal",
+        "score": []
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "type": 5,
+    "text": "¿Cuál es tu nivel de experiencia y confianza al volante?",
+    "answers": [
+      {
+        "id": "q20_answer1",
+        "text": "Soy un conductor novato y prefiero un coche fácil de manejar",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "transmissionAuto",
+            "value": 20,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "brandBMW",
+            "value": -10,
+            "externalIdentificator": "brand_id",
+            "externalValue": 32
+          },
+          {
+            "internalIdentificator": "cv200",
+            "value": -10,
+            "externalIdentificator": "min_cv",
+            "externalValue": 200
+          },
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "bodyStylePickUp",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 8
+          },
+          {
+            "internalIdentificator": "bodyStyleTruck",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 9
+          },
+          {
+            "internalIdentificator": "bodyStyleVan",
+            "value": -10,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 6
+          }
+        ]
+      },
+      {
+        "id": "q20_answer2",
+        "text": "Tengo experiencia pero prefiero una conducción cómoda y relajada",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleSedan",
+            "value": 20,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "transmissionAuto",
+            "value": 20,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "transmissionSemi",
+            "value": 20,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 2
+          },
+          {
+            "internalIdentificator": "transmissionManual",
+            "value": -20,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 1
+          }
+        ]
+      },
+      {
+        "id": "q20_answer3",
+        "text": "Soy un conductor experimentado",
+        "score": [
+          {
+            "internalIdentificator": "bodyStyleCoupe",
+            "value": 30,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 4
+          },
+          {
+            "internalIdentificator": "bodyStyle4x4",
+            "value": 30,
+            "externalIdentificator": "vehicle_type_ids",
+            "externalValue": 7
+          },
+          {
+            "internalIdentificator": "transmissionManual",
+            "value": 30,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 1
+          },
+          {
+            "internalIdentificator": "cv200",
+            "value": 30,
+            "externalIdentificator": "min_cv",
+            "externalValue": 200
+          },
+          {
+            "internalIdentificator": "transmissionAuto",
+            "value": -20,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 3
+          },
+          {
+            "internalIdentificator": "transmissionSemi",
+            "value": -20,
+            "externalIdentificator": "gearbox_ids",
+            "externalValue": 2
+          }
+        ]
+      },
+      {
+        "id": "q20_answer4",
+        "text": "No tengo preferencia en cuanto a experiencia de conducción",
+        "score": []
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "type": 2,
+    "text": "¿Cuál es tu preferencia respecto al kilometraje del vehículo?",
+    "answers": [
+      {
+        "id": "q21_answer1",
+        "text": "Prefiero un vehículo usado anteriormente por otra persona.",
+        "score": [
+          {
+            "internalIdentificator": "km10000",
+            "value": 100,
+            "externalIdentificator": "min_kms",
+            "externalValue": 10000
+          }
+        ]
+      },
+      {
+        "id": "q21_answer2",
+        "text": "Prefiero un vehículo que no tenga uso persona.",
+        "score": [
+          {
+            "internalIdentificator": "km1000",
+            "value": -100,
+            "externalIdentificator": "min_kms",
+            "externalValue": 10000
+          }
+        ]
+      },
+      {
+        "id": "q21_answer3",
+        "text": "No tiene importancia para mí.",
+        "score": []
+      }
+    ]
+  }
+]

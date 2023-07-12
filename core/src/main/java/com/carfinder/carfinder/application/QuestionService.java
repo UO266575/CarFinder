@@ -90,8 +90,8 @@ public class QuestionService {
     }
 
     public boolean insertDefaultQuestions() {
-        InsertDefaultQuestionsData insert = new InsertDefaultQuestionsData(this);
-        insert.createAndInsertQuestions();
+        InsertDefaultQuestions insert = new InsertDefaultQuestions(this);
+        insert.insertQuestions();
         return true;
     }
 
