@@ -7,14 +7,17 @@ import co.elastic.clients.elasticsearch.core.search.Hit;
 import com.carfinder.carfinder.domain.Question;
 import com.carfinder.carfinder.domain.QuestionAdapter;
 import com.carfinder.carfinder.domain.exceptions.RepositoryException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Repository
 public class QuestionRepository implements QuestionAdapter {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private final ElasticsearchClient elasticsearchClient;
 
@@ -31,6 +34,7 @@ public class QuestionRepository implements QuestionAdapter {
                             .size(1000), Question.class)
                     .hits().hits().stream().map(Hit::source).toList();
         } catch (IOException e) {
+            logger.error("Repository error {}", e.getMessage());
             throw new RepositoryException("Error getting all questions:", e);
         }
     }
