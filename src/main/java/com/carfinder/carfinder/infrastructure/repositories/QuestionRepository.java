@@ -34,7 +34,7 @@ public class QuestionRepository implements QuestionAdapter {
                             .size(1000), Question.class)
                     .hits().hits().stream().map(Hit::source).toList();
         } catch (IOException e) {
-            logger.error("Repository error {}", e.getMessage());
+            logger.error("getQuestions() Repository error: {}, {}", e.getMessage(), e.getStackTrace());
             throw new RepositoryException("Error getting all questions:", e);
         }
     }
@@ -47,6 +47,7 @@ public class QuestionRepository implements QuestionAdapter {
                     .id(id), Question.class);
             return response.source();
         } catch (IOException e) {
+            logger.error("getQuestionById() Repository error: {}, {}", e.getMessage(), e.getStackTrace());
             throw new RepositoryException("Error getting question by id: " + id, e);
         }
     }
@@ -59,6 +60,7 @@ public class QuestionRepository implements QuestionAdapter {
                     .id(question.id())
                     .document(question));
         } catch (IOException e) {
+            logger.error("addQuestion() Repository error: {}, {}", e.getMessage(), e.getStackTrace());
             throw new RepositoryException("Error adding question:", e);
         }
     }
@@ -71,6 +73,7 @@ public class QuestionRepository implements QuestionAdapter {
                     .id(id)
                     .document(question));
         } catch (IOException e) {
+            logger.error("updateQuestion() Repository error: {}, {}", e.getMessage(), e.getStackTrace());
             throw new RepositoryException("Error updating question:", e);
         }
     }
@@ -82,6 +85,7 @@ public class QuestionRepository implements QuestionAdapter {
                     .index("questions")
                     .id(id));
         } catch (IOException e) {
+            logger.error("deleteQuestion() Repository error: {}, {}", e.getMessage(), e.getStackTrace());
             throw new RepositoryException("Error deleting question:", e);
         }
     }
@@ -93,6 +97,7 @@ public class QuestionRepository implements QuestionAdapter {
                     .index("questions")
                     .query(QueryBuilders.matchAll(q -> q)));
         } catch (IOException e) {
+            logger.error("deleteAllQuestions() Repository error: {}, {}", e.getMessage(), e.getStackTrace());
             throw new RepositoryException("Error deleting all questions:", e);
         }
     }
