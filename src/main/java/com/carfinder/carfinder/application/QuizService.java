@@ -5,11 +5,10 @@ import com.carfinder.carfinder.domain.Filter;
 import com.carfinder.carfinder.domain.Question;
 import com.carfinder.carfinder.domain.Quiz;
 import com.carfinder.carfinder.infrastructure.external.adapters.AdsRetrieverAdapter;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class QuizService {
@@ -22,20 +21,19 @@ public class QuizService {
 
     private final AdsRetrieverAdapter adsRetrieverAdapter;
 
-    public QuizService(QuestionService questionService, AnswerService answerService, AdsRetrieverAdapter adsRetrieverAdapter) {
+    private final HttpSession httpSession;
+
+    public QuizService(QuestionService questionService, AnswerService answerService, AdsRetrieverAdapter adsRetrieverAdapter, HttpSession httpSession) {
         this.questionService = questionService;
         this.answerService = answerService;
         this.adsRetrieverAdapter = adsRetrieverAdapter;
+        this.httpSession = httpSession;
         this.quiz = new Quiz();
     }
 
 
     public void processAnswerSelection(Answer answer) {
-        answer.score().forEach(i -> quiz.calculateFilter(i));
-    }
-
-    public List<Filter> getHigherFilters() {
-        return quiz.getHigherFilters();
+        answer.score().forEach(i -> calculateFilter(i));
     }
 
     public void processAnswerSelection(List<String> answers) {
@@ -54,5 +52,53 @@ public class QuizService {
             queryParams.put(filter.externalIdentificator, filter.externalValue);
         }
         return adsRetrieverAdapter.callAPI(queryParams);
+    }
+
+    public void calculateFilter(Filter filter) {
+        Set<Filter> filters = (Set<Filter>) httpSession.getAttribute("filters");
+        if (filters == null) {
+            filters = new HashSet<Filter>();
+        }
+        boolean found = false;
+        for (Filter existingFilter : filters) {
+            if (filter.internalIdentificator.equals(existingFilter.internalIdentificator)) {
+                existingFilter.value += filter.value;
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            filters.add(filter);
+        }
+        httpSession.setAttribute("filters", filters);
+    }
+
+    public List<Filter> getHigherFilters() {
+        Set<Filter> filters = (Set<Filter>) httpSession.getAttribute("filters");
+        if (filters == null) {
+            filters = new HashSet<Filter>();
+        }
+        List<Filter> higherFilters = new ArrayList<Filter>();
+        int maxBrandIdValue = 0;
+        Filter maxBrandIdFilter = null;
+        for (Filter filter : filters) {
+            switch (filter.externalIdentificator) {
+                case "brand_id":
+                    if (filter.value > maxBrandIdValue) {
+                        maxBrandIdValue = filter.value;
+                        maxBrandIdFilter = filter;
+                    }
+                    break;
+                case "vehicle_type_ids", "emission_sticker_ids", "gearbox_ids", "min_kms", "min_cv":
+                    if (filter.value > 40) {
+                        higherFilters.add(filter);
+                    }
+                    break;
+            }
+        }
+        if (maxBrandIdValue > 0) {
+            higherFilters.add(maxBrandIdFilter);
+        }
+        return higherFilters;
     }
 }
