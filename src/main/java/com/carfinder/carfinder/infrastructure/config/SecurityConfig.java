@@ -27,7 +27,7 @@ public class SecurityConfig implements WebMvcConfigurer {
                 .oauth2Login(Customizer.withDefaults())
                 .oauth2Login(oauth2 -> oauth2
                         .successHandler(authenticationSuccessHandler)
-                );
+                ).logout().logoutSuccessHandler(new CustomLogoutSuccessHandler());
         return httpSecurity.build();
     }
 }
