@@ -25,7 +25,7 @@ public class InsertDefaultQuestions {
 
     public static List<Question> deserialize() {
         ObjectMapper objectMapper = new ObjectMapper();
-        File jsonFile = new File("core/src/main/resources/data/default_questions.json");
+        File jsonFile = new File("src/main/resources/data/default_questions.json");
         List<Question> questions = null;
         try {
             questions = objectMapper.readValue(jsonFile, new TypeReference<List<Question>>(){});
