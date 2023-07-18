@@ -1,5 +1,6 @@
 package com.carfinder.carfinder.application;
 
+import com.carfinder.carfinder.domain.Answer;
 import com.carfinder.carfinder.domain.Question;
 import com.carfinder.carfinder.domain.QuestionAdapter;
 import com.carfinder.carfinder.domain.exceptions.RepositoryException;
@@ -15,12 +16,9 @@ public class QuestionService {
 
     private final QuestionAdapter questionAdapter;
 
-    private final AnswerService answerService;
-
-    public QuestionService(HttpSession httpSession, QuestionAdapter questionAdapter, AnswerService answerService) {
+    public QuestionService(HttpSession httpSession, QuestionAdapter questionAdapter) {
         this.httpSession = httpSession;
         this.questionAdapter = questionAdapter;
-        this.answerService = answerService;
     }
 
     public List<Question> getQuestions() {
@@ -45,7 +43,6 @@ public class QuestionService {
 
     public boolean addQuestion(Question question) {
         try {
-            answerService.addAnswers(question.answers());
             questionAdapter.addQuestion(question);
         } catch (RepositoryException re) {
             return false;
@@ -89,12 +86,6 @@ public class QuestionService {
         return true;
     }
 
-    public boolean insertDefaultQuestions() {
-        InsertDefaultQuestions insert = new InsertDefaultQuestions(this);
-        insert.insertQuestions();
-        return true;
-    }
-
     public List<Question> retrieveFiveQuestions() {
         List<Question> questions = new ArrayList<Question>();
         Set<String> questionsShown = (Set<String>) httpSession.getAttribute("questionsShown");
@@ -123,5 +114,19 @@ public class QuestionService {
                 .stream()
                 .filter(question -> !questionsShown.contains(question.id()))
                 .toList();
+    }
+
+    public void deleteAnswer(String id) {
+        String idQuestion = String.valueOf(id.charAt(1));
+        Question question = getQuestionById(idQuestion);
+        List<Answer> answers = question.answers();
+        List<Answer> updated = new ArrayList<>();
+        for (Answer answer: answers) {
+            if(!answer.id().equals(id)){
+                updated.add(answer);
+            }
+        }
+        Question updatedQuestion = new Question(question.id(), question.type(), question.text(), updated);
+        updateQuestion(idQuestion, updatedQuestion);
     }
 }
