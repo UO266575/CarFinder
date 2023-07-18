@@ -1,5 +1,6 @@
 package com.carfinder.carfinder.infrastructure.controllers;
 
+import com.carfinder.carfinder.application.AnswerService;
 import com.carfinder.carfinder.application.QuestionService;
 import com.carfinder.carfinder.domain.Question;
 import org.springframework.http.HttpStatus;
@@ -15,8 +16,11 @@ public class QuestionController {
 
     private final QuestionService questionService;
 
-    public QuestionController(QuestionService questionService) {
+    private final AnswerService answerService;
+
+    public QuestionController(QuestionService questionService, AnswerService answerService) {
         this.questionService = questionService;
+        this.answerService = answerService;
     }
 
     @GetMapping
@@ -33,6 +37,7 @@ public class QuestionController {
 
     @PostMapping
     public ResponseEntity<String> addQuestion(@RequestBody Question question) {
+        answerService.addAnswers(question.answers());
         return questionService.addQuestion(question) ?
                 ResponseEntity.ok("Question added successfully") :
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to add the question");
@@ -59,7 +64,7 @@ public class QuestionController {
 
     @PostMapping("/bulkDefault")
     public ResponseEntity<String> addDefaultQuestions() {
-        return questionService.insertDefaultQuestions() ?
+        return answerService.insertDefaultQuestions() ?
                 ResponseEntity.ok("Question added successfully") :
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body("Failed to add the question");
     }

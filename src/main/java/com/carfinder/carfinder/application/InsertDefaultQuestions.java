@@ -12,13 +12,17 @@ public class InsertDefaultQuestions {
 
     private final QuestionService questionService;
 
-    public InsertDefaultQuestions(QuestionService questionService) {
+    private final AnswerService answerService;
+
+    public InsertDefaultQuestions(QuestionService questionService, AnswerService answerService) {
         this.questionService = questionService;
+        this.answerService = answerService;
     }
 
     public void insertQuestions(){
         List<Question> questions = deserialize();
         for (Question question: questions) {
+            answerService.addAnswers(question.answers());
             questionService.addQuestion(question);
         }
     }

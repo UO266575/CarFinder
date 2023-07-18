@@ -32,7 +32,7 @@ public class SecurityConfig implements WebMvcConfigurer, OAuth2UserService<OAuth
         httpSecurity
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> {
-                    auth.requestMatchers("/question").authenticated();
+                    //auth.requestMatchers("/question").authenticated();
                     auth.anyRequest().permitAll();
                 })
                 //.oauth2Login(oauth2 -> oauth2.userInfoEndpoint(C)

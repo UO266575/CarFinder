@@ -12,8 +12,11 @@ public class AnswerService {
 
     private final AnswerAdapter answerAdapter;
 
-    public AnswerService(AnswerAdapter answerAdapter) {
+    private final QuestionService questionService;
+
+    public AnswerService(AnswerAdapter answerAdapter, QuestionService questionService) {
         this.answerAdapter = answerAdapter;
+        this.questionService = questionService;
     }
 
     public List<Answer> getAnswers() {
@@ -72,6 +75,7 @@ public class AnswerService {
         }
         try {
             answerAdapter.deleteAnswer(id);
+            questionService.deleteAnswer(id);
         } catch (RepositoryException re) {
             return false;
         }
@@ -87,6 +91,12 @@ public class AnswerService {
         } catch (RepositoryException re) {
             return false;
         }
+        return true;
+    }
+
+    public boolean insertDefaultQuestions() {
+        InsertDefaultQuestions insert = new InsertDefaultQuestions(questionService, this);
+        insert.insertQuestions();
         return true;
     }
 }
