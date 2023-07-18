@@ -1,9 +1,6 @@
 package com.carfinder.carfinder.application;
 
-import com.carfinder.carfinder.domain.Answer;
-import com.carfinder.carfinder.domain.Filter;
-import com.carfinder.carfinder.domain.Question;
-import com.carfinder.carfinder.domain.Quiz;
+import com.carfinder.carfinder.domain.*;
 import com.carfinder.carfinder.infrastructure.external.adapters.AdsRetrieverAdapter;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Service;
@@ -46,7 +43,7 @@ public class QuizService {
         return questionService.retrieveFiveQuestions();
     }
 
-    public String getCarAds(){
+    public List<Ad> getCarAds(){
         Map<String,Integer> queryParams = new HashMap<String, Integer>();
         for(Filter filter : getHigherFilters()){
             queryParams.put(filter.externalIdentificator, filter.externalValue);

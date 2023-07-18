@@ -2,6 +2,7 @@ package com.carfinder.carfinder.infrastructure.controllers;
 
 import com.carfinder.carfinder.application.AnswerService;
 import com.carfinder.carfinder.application.QuizService;
+import com.carfinder.carfinder.domain.Ad;
 import com.carfinder.carfinder.domain.Answer;
 import com.carfinder.carfinder.domain.Filter;
 import com.carfinder.carfinder.domain.Question;
@@ -30,7 +31,7 @@ public class QuizController {
     }
 
     @PostMapping("/answer/bulk")
-    public ResponseEntity<String> userAnswersSelection(@RequestBody List<String> answers) {
+    public ResponseEntity<List<Ad>> userAnswersSelection(@RequestBody List<String> answers) {
         quizService.processAnswerSelection(answers);
         return ResponseEntity.ok(quizService.getCarAds());
     }
