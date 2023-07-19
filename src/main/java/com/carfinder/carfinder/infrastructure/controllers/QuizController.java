@@ -33,7 +33,7 @@ public class QuizController {
     @PostMapping("/answer/bulk")
     public ResponseEntity<List<Ad>> userAnswersSelection(@RequestBody List<String> answers) {
         quizService.processAnswerSelection(answers);
-        return ResponseEntity.ok(quizService.getCarAds());
+        return ResponseEntity.ok(quizService.getCarAds(QuizService.OrderType.DEFAULT));
     }
 
     @GetMapping("/round")
