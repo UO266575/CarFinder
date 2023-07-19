@@ -108,7 +108,7 @@ public class QuestionService {
                 return retrieveRemainQuestions(questionsShown);
             }
             String id = String.valueOf(random.nextInt(17) + 5);
-            if (!questionsShown.contains(id)) {
+            if (!questionsShown.contains(id) && getQuestionById(id) != null) {
                 questions.add(getQuestionById(id));
                 questionsShown.add(id);
             }
