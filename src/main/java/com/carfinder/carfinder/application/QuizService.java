@@ -20,6 +20,12 @@ public class QuizService {
 
     private final HttpSession httpSession;
 
+    public enum OrderType {
+        DEFAULT,
+        PRICE_ASC,
+        PRICE_DESC
+    }
+
     public QuizService(QuestionService questionService, AnswerService answerService, AdsRetrieverAdapter adsRetrieverAdapter, HttpSession httpSession) {
         this.questionService = questionService;
         this.answerService = answerService;
@@ -43,12 +49,23 @@ public class QuizService {
         return questionService.retrieveFiveQuestions();
     }
 
-    public List<Ad> getCarAds(){
+    public List<Ad> getCarAds(OrderType orderType){
         Map<String,Integer> queryParams = new HashMap<String, Integer>();
         for(Filter filter : getHigherFilters()){
             queryParams.put(filter.externalIdentificator, filter.externalValue);
         }
-        return adsRetrieverAdapter.callAPI(queryParams);
+        List<Ad> ads = adsRetrieverAdapter.callAPI(queryParams);
+        switch(orderType) {
+            case PRICE_ASC:
+                ads.sort((ad1, ad2) -> Float.compare(ad1.price(), ad2.price()));
+                break;
+            case PRICE_DESC:
+                ads.sort((ad1, ad2) -> Float.compare(ad2.price(), ad1.price()));
+                break;
+            default:
+                break;
+        }
+        return ads;
     }
 
     public void calculateFilter(Filter filter) {
