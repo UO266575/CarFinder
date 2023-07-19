@@ -117,7 +117,7 @@ public class QuestionService {
     }
 
     public void deleteAnswer(String id) {
-        String idQuestion = String.valueOf(id.charAt(1));
+        String idQuestion = id.substring(id.indexOf("q") + 1, id.indexOf("_"));
         Question question = getQuestionById(idQuestion);
         List<Answer> answers = question.answers();
         List<Answer> updated = new ArrayList<>();
