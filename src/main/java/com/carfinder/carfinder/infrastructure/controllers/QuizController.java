@@ -31,8 +31,13 @@ public class QuizController {
     }
 
     @PostMapping("/answer/bulk")
-    public ResponseEntity<List<Ad>> userAnswersSelection(@RequestBody List<String> answers) {
+    public ResponseEntity<Void> userAnswersSelection(@RequestBody List<String> answers) {
         quizService.processAnswerSelection(answers);
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/result")
+    public ResponseEntity<List<Ad>> retrieveAdsResult() {
         return ResponseEntity.ok(quizService.getCarAds(QuizService.OrderType.DEFAULT));
     }
 
@@ -46,5 +51,11 @@ public class QuizController {
     public ResponseEntity<List<Filter>> getHigherFilters() {
         List<Filter> filters = quizService.getHigherFilters();
         return filters != null ? ResponseEntity.ok(filters) : ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    }
+
+    @PostMapping("/reestablish")
+    public ResponseEntity<Void> reestablishFilters() {
+        quizService.reestablishAnswers();
+        return ResponseEntity.ok().build();
     }
 }

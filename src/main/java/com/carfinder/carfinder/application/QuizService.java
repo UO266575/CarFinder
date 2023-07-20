@@ -115,4 +115,8 @@ public class QuizService {
         }
         return higherFilters;
     }
+
+    public void reestablishAnswers() {
+        httpSession.setAttribute("filters", new HashSet<Filter>());
+    }
 }
