@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
@@ -96,7 +97,10 @@ public class QuestionService {
         int questionsShownSize = questionsShown.size();
         while (questionsShown.size() - questionsShownSize < 5) {
             if (getQuestions().size() - questionsShownSize < 5) {
-                return retrieveRemainQuestions(questionsShown);
+                List<Question> remainQuestions = retrieveRemainQuestions(questionsShown);
+                questionsShown.addAll(remainQuestions.stream().map( q -> q.id()).collect(Collectors.toSet()));
+                httpSession.setAttribute("questionsShown", questionsShown);
+                return remainQuestions;
             }
             String id = String.valueOf(random.nextInt(17) + 5);
             if (!questionsShown.contains(id) && getQuestionById(id) != null) {
