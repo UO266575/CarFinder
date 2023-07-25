@@ -55,7 +55,7 @@ public class QuizController {
 
     @PostMapping("/reestablish")
     public ResponseEntity<Void> reestablishFilters() {
-        quizService.reestablishAnswers();
+        quizService.reestablishQuiz();
         return ResponseEntity.ok().build();
     }
 }

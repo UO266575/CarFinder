@@ -2,6 +2,7 @@ package com.carfinder.carfinder.application;
 
 import com.carfinder.carfinder.domain.*;
 import com.carfinder.carfinder.infrastructure.external.adapters.AdsRetrieverAdapter;
+import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Service;
 
@@ -116,7 +117,9 @@ public class QuizService {
         return higherFilters;
     }
 
-    public void reestablishAnswers() {
+    public void reestablishQuiz() {
         httpSession.setAttribute("filters", new HashSet<Filter>());
+        httpSession.setAttribute("questionsShown", new HashSet<String>());
+        System.out.println(httpSession.getAttribute("questionsShown"));
     }
 }
