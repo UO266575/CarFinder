@@ -36,8 +36,12 @@ public class QuizController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/result/{orderType}")
+    public ResponseEntity<List<Ad>> retrieveAdsResult(@PathVariable QuizService.OrderType orderType) {
+        return ResponseEntity.ok(quizService.getCarAds(orderType));
+    }
     @GetMapping("/result")
-    public ResponseEntity<List<Ad>> retrieveAdsResult() {
+    public ResponseEntity<List<Ad>> retrieveAdsResultNoOrder() {
         return ResponseEntity.ok(quizService.getCarAds(QuizService.OrderType.DEFAULT));
     }
 

@@ -120,6 +120,5 @@ public class QuizService {
     public void reestablishQuiz() {
         httpSession.setAttribute("filters", new HashSet<Filter>());
         httpSession.setAttribute("questionsShown", new HashSet<String>());
-        System.out.println(httpSession.getAttribute("questionsShown"));
     }
 }
