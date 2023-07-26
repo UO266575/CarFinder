@@ -36,12 +36,20 @@ public class QuizController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/result/{orderType}")
-    public ResponseEntity<List<Ad>> retrieveAdsResult(@PathVariable QuizService.OrderType orderType) {
-        return ResponseEntity.ok(quizService.getCarAds(orderType));
+    @GetMapping("/result/{id}")
+    public ResponseEntity<List<Ad>> retrieveAdsResult(@PathVariable String id) {
+        switch (Integer.parseInt(id)) {
+            case 1:
+                return ResponseEntity.ok(quizService.getCarAds(QuizService.OrderType.PRICE_ASC));
+            case 2:
+                return ResponseEntity.ok(quizService.getCarAds(QuizService.OrderType.PRICE_DESC));
+            default:
+                return ResponseEntity.ok(quizService.getCarAds(QuizService.OrderType.DEFAULT));
+        }
     }
+
     @GetMapping("/result")
-    public ResponseEntity<List<Ad>> retrieveAdsResultNoOrder() {
+    public ResponseEntity<List<Ad>> retrieveAdsResult() {
         return ResponseEntity.ok(quizService.getCarAds(QuizService.OrderType.DEFAULT));
     }
 
