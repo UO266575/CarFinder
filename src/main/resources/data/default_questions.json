@@ -208,18 +208,6 @@
         "text": "Confort y espacio",
         "score": [
           {
-            "internalIdentificator": "doors5",
-            "value": 20,
-            "externalIdentificator": "icekarId",
-            "externalValue": 0
-          },
-          {
-            "internalIdentificator": "seats5",
-            "value": 20,
-            "externalIdentificator": "icekarId",
-            "externalValue": 0
-          },
-          {
             "internalIdentificator": "bodyStyleMPV",
             "value": 20,
             "externalIdentificator": "vehicle_type_ids",
@@ -461,18 +449,6 @@
         "id": "q8_answer2",
         "text": "Viajes en familia o con amigos",
         "score": [
-          {
-            "internalIdentificator": "doors5",
-            "value": 20,
-            "externalIdentificator": "icekarId",
-            "externalValue": 0
-          },
-          {
-            "internalIdentificator": "seats5",
-            "value": 20,
-            "externalIdentificator": "icekarId",
-            "externalValue": 0
-          },
           {
             "internalIdentificator": "bodyStyleFamily",
             "value": 20,
