@@ -2,7 +2,6 @@ package com.carfinder.carfinder.application;
 
 import com.carfinder.carfinder.domain.*;
 import com.carfinder.carfinder.infrastructure.external.adapters.AdsRetrieverAdapter;
-import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Service;
 
@@ -120,5 +119,24 @@ public class QuizService {
     public void reestablishQuiz() {
         httpSession.setAttribute("filters", new HashSet<Filter>());
         httpSession.setAttribute("questionsShown", new HashSet<String>());
+    }
+
+    public List<Ad> search(List<Filter> filters, OrderType orderType) {
+        Map<String,Integer> queryParams = new HashMap<String, Integer>();
+        for(Filter filter : filters){
+            queryParams.put(filter.externalIdentificator, filter.externalValue);
+        }
+        List<Ad> ads = adsRetrieverAdapter.callAPI(queryParams);
+        switch(orderType) {
+            case PRICE_ASC:
+                ads.sort((ad1, ad2) -> Float.compare(ad1.price(), ad2.price()));
+                break;
+            case PRICE_DESC:
+                ads.sort((ad1, ad2) -> Float.compare(ad2.price(), ad1.price()));
+                break;
+            default:
+                break;
+        }
+        return ads;
     }
 }
