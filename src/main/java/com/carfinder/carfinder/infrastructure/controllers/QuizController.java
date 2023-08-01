@@ -71,9 +71,9 @@ public class QuizController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/search/{id}")
+    @PostMapping("/search/{id}")
     public ResponseEntity<List<Ad>> searchWithFilters(@PathVariable String id,
-                                                      @RequestParam("filters") List<Filter> filters){
+                                                      @RequestBody List<Filter> filters){
         switch (Integer.parseInt(id)) {
             case 1:
                 return ResponseEntity.ok(quizService.search(filters, QuizService.OrderType.PRICE_ASC));
